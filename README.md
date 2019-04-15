@@ -1,6 +1,10 @@
-# aknk-portfolio
+# vue-app
 
-> akane yamashita's portfolio
+> A Vue.js project
+
+# url
+
+https://ixap2i.github.io/
 
 ## Build Setup
 

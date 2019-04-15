@@ -1,7 +1,7 @@
 {
-  "name": "aknk-portfolio",
+  "name": "vue-app",
   "version": "1.0.0",
-  "description": "akane yamashita's portfolio",
+  "description": "A Vue.js project",
   "author": "aknk",
   "private": true,
   "scripts": {
@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuetify": "^1.5.11"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
