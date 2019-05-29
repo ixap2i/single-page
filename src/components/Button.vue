@@ -1,25 +1,56 @@
 <template>
   <transition name="fade">
     <div>
-      <v-btn v-if="show" color="success">Success</v-btn>
-      <v-btn color="error">Error</v-btn>
-      <v-btn color="warning">Warning</v-btn>
-      <v-btn color="info">Info</v-btn>
+      <v-layout>
+	<v-btn color="github" href="https://github.com/ixap2i">Github</v-btn>
+        <v-btn color="insta" href="https://www.instagram.com/umiharuno/">Instagram</v-btn>
+        <v-btn color="blog" href="https://letterneginr.hateblo.jp/">Blog</v-btn>
+        <router-link :to="'about'">About</router-link>
+      </v-layout>
     </div>
   </transition>
 </template>
 
+<script>
+import Card from '@/components/Card.vue'
+
+export default {
+  name: 'Card',
+  components: {
+    Card
+  }
+}
+</script>
 <style>
-.fade-enter-active {
-  /*開始の状態を指定する*/
-  opacity: 0;
+button, a {
+  z-index: 1;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(236, 32%, 26%);
 }
-.fade-enter, fade-leave-to {
-  /*終了の状態を指定する*/
-  opacity: 0;
+
+button:hover, a:hover {
+  cursor: pointer;
+  animation: jelly 0.5s;
 }
-.fade-enter-active {
-   /*動作（イージングや時間）を指定する*/
-  transition: opacity 300ms ease-out;
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
 }
 </style>

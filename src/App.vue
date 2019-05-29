@@ -1,20 +1,21 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
     <Button />
     <Icon />
+    <Modal />
   </div>
 </template>
 
 <script>
 import Button from '@/components/Button.vue'
 import Icon from '@/components/Icon.vue'
+import Modal from '@/components/Modal.vue'
 
 export default {
   name: 'App',
   components: {
-    Button, Icon
+    Button, Icon, Modal
   }
 }
 </script>
