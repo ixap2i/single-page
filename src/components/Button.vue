@@ -1,23 +1,28 @@
 <template>
   <transition name="fade">
     <div>
-      <v-layout>
-	<v-btn color="github" href="https://github.com/ixap2i">Github</v-btn>
+      <v-layout
+        align-center
+        justify-space-around
+        wrap>
+        <v-btn color="github" href="https://github.com/ixap2i">Github</v-btn>
         <v-btn color="insta" href="https://www.instagram.com/umiharuno/">Instagram</v-btn>
         <v-btn color="blog" href="https://letterneginr.hateblo.jp/">Blog</v-btn>
-        <router-link :to="'about'">About</router-link>
+        <Modal/>
+        <Modal2/>
       </v-layout>
     </div>
   </transition>
 </template>
 
 <script>
-import Card from '@/components/Card.vue'
+import Modal from '@/components/WorkHistory.vue'
+import Modal2 from '@/components/Skill.vue'
 
 export default {
   name: 'Card',
   components: {
-    Card
+    Modal, Modal2
   }
 }
 </script>

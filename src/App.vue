@@ -1,21 +1,26 @@
 <template>
   <div id="app">
+    <v-avatar>
+      <img
+        src="assets/person.png"
+        alt="Akane"
+      >
+    </v-avatar>
     <router-view/>
     <Button />
-    <Icon />
-    <Modal />
+    <Carousel />
+    <h1>2019 Akane Yamashita</h1>
   </div>
 </template>
 
 <script>
 import Button from '@/components/Button.vue'
-import Icon from '@/components/Icon.vue'
-import Modal from '@/components/Modal.vue'
+import Carousel from '@/components/Carousel.vue'
 
 export default {
   name: 'App',
   components: {
-    Button, Icon, Modal
+    Button, Carousel
   }
 }
 </script>
@@ -28,5 +33,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h1 {
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 </style>
