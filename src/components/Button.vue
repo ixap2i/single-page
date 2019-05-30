@@ -5,9 +5,9 @@
         align-center
         justify-space-around
         wrap>
-        <v-btn color="github" href="https://github.com/ixap2i">Github</v-btn>
-        <v-btn color="insta" href="https://www.instagram.com/umiharuno/">Instagram</v-btn>
-        <v-btn color="blog" href="https://letterneginr.hateblo.jp/">Blog</v-btn>
+        <v-btn color="dark" href="https://github.com/ixap2i">Github</v-btn>
+        <v-btn color="red" href="https://www.instagram.com/umiharuno/">Instagram</v-btn>
+        <v-btn color="green" href="https://letterneginr.hateblo.jp/">Blog</v-btn>
         <Modal/>
         <Modal2/>
       </v-layout>

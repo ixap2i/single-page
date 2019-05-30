@@ -1,8 +1,7 @@
 <template>
   <div class="text-xs-center">
     <v-dialog
-      v-model="dialog"
-      width="500">
+      v-model="dialog">
       <template v-slot:activator="{ on }">
         <v-btn
           color="pink lighten-2"
@@ -28,9 +27,9 @@
                 <span>2015.04</span>
               </template>
               <v-card class="elevation-2">
-                <v-card-title class="headline">継続支援B型</v-card-title>
+                <v-card-title class="headline">継続支援B型👩‍🏫</v-card-title>
                 <v-card-text>
-                  生活支援員（社会福祉士）
+                  生活支援員（社会福祉士）<br>
                     - 高次機能障害・ADHD・軽度知的障害を持つものに対して職業指導などを実施
                 </v-card-text>
               </v-card>
@@ -39,18 +38,17 @@
               color="red lighten-2"
               large>
               <template v-slot:opposite>
-                <span>2015.04</span>
+                <span>2016.11</span>
               </template>
               <v-card class="elevation-2">
-                <v-card-title class="headline">継続支援B型</v-card-title>
+                <v-card-title class="headline">客先常駐👩‍💼</v-card-title>
                 <v-card-text>
-                  客先常駐
-                    - 金融系証券システムの開発・デバッグ***
-                      - FileStreamクラスの実装
-                      - 単体・統合テスト
-                    - 通信系システムの開発・デバッグ***
-                    - フロントエンドの改修（表示項目の変更など）
-                    - 単体・統合テスト
+                - 金融系証券システムの開発・デバッグ<br>
+                  - FileStreamクラスの実装<br>
+                  - 単体・統合テスト<br>
+                - 通信系システムの開発・デバッグ<br>
+                  - フロントエンドの改修（表示項目の変更など）<br>
+                  - 単体・統合テスト<br>
                 </v-card-text>
               </v-card>
             </v-timeline-item>
@@ -58,15 +56,16 @@
               color="red lighten-2"
               large>
               <template v-slot:opposite>
-                <span>2015.04</span>
+                <span>2017.12</span>
               </template>
               <v-card class="elevation-2">
-                <v-card-title class="headline">飲食店発注サービス / <a href="https://kitchenbrothers.jp/">メディアサイト</a>の改修</v-card-title>
+                <v-card-title class="headline">飲食店発注サービス /
+                <br> <router-link to="https://kitchenbrothers.jp/">メディアサイト</router-link>の改修🍳</v-card-title>
                 <v-card-text>
-                  - 発注機能のステータス改修
-                  - CSVの出力機能の改修
-                  - 絞り込み検索機能の開発
-                  - フロントエンドコーディング（表示項目の変更など）
+                  - 発注機能のステータス改修<br>
+                  - CSVの出力機能の改修<br>
+                  - 絞り込み検索機能の開発<br>
+                  - フロントエンドコーディング（表示項目の変更など）<br>
                   - スライダー、エフェクト付きのLPコーディング
                 </v-card-text>
               </v-card>
@@ -75,19 +74,19 @@
               color="red lighten-2"
               large>
               <template v-slot:opposite>
-                <span>2015.04</span>
+                <span>2018.12 ~ now</span>
               </template>
               <v-card class="elevation-2">
                 <v-card-title class="headline">オンライン診療サービス🏥</v-card-title>
                 <v-card-text>
-                  - WebAPI, 管理画面の開発    
-                    - xml, CSVの出力機能の改修
-                    - Rspecによるテストの自動化
-                    - データの出力 / フロントエンド改修(Angular.js)
-                  - 法人サイトのSEO監修   
-                    - OGPタグ・マークアップ・サイト構造(sitemap.xml)の見直し、ブログコンテンツのパーマリンクのパス変更
-                    - GoogleAnalyticsの観察・使用ブラウザ毎にレスポンシブ対応
-                  -ネイティブアプリの実装補助    
+                  - WebAPI, 管理画面の開発<br>
+                    - xml, CSVの出力機能の改修<br>
+                    - Rspecによるテストの自動化<br>
+                    - データの出力 / フロントエンド改修(Angular.js)<br>
+                  - 法人サイトのSEO監修<br>
+                    - OGPタグ・マークアップ・サイト構造(sitemap.xml)の見直し、ブログコンテンツのパーマリンクのパス変更<br>
+                    - GoogleAnalyticsの観察・使用ブラウザ毎にレスポンシブ対応<br>
+                  - ネイティブアプリの実装補助<br>
                 </v-card-text>
               </v-card>
             </v-timeline-item>
@@ -106,6 +105,12 @@
     </v-dialog>
   </div>
 </template>
+
+<style>
+.v-card__text {
+  text-align: left;
+}
+</style>
 
 <script>
 import VueMarkdown from 'vue-markdown'

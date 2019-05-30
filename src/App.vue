@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-avatar>
-      <v-img :src="require('@/assets/person.png')" />
+      <v-img  style='height: 70px; width: 70px; margin-bottom: 20px;' :src="require('@/assets/person.png')" />
     </v-avatar>
     <router-view/>
     <Button />
@@ -33,5 +33,9 @@ h1 {
   font-size: 13px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+#app .v-avatar {
+  height: 70px;
+  width: 70px;
 }
 </style>

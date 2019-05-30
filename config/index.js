@@ -9,7 +9,7 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/',
     proxyTable: {},
     // Various Dev Server settings
     // host: 'ixap2i.github.io', // can be overwritten by process.env.HOST
