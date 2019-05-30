@@ -9,7 +9,7 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '../src/assets',
+    assetsPublicPath: '/',
     proxyTable: {},
     // Various Dev Server settings
     // host: 'ixap2i.github.io', // can be overwritten by process.env.HOST
@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '../src/assets',
+    assetsPublicPath: '/',
 
     /**
      * Source Maps

@@ -1,26 +1,21 @@
 <template>
   <div id="app">
     <v-avatar>
-      <img
-        src="assets/person.png"
-        alt="Akane"
-      >
+      <v-img :src="require('@/assets/person.png')" />
     </v-avatar>
     <router-view/>
     <Button />
-    <Carousel />
     <h1>2019 Akane Yamashita</h1>
   </div>
 </template>
 
 <script>
 import Button from '@/components/Button.vue'
-import Carousel from '@/components/Carousel.vue'
 
 export default {
   name: 'App',
   components: {
-    Button, Carousel
+    Button
   }
 }
 </script>

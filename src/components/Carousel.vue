@@ -13,21 +13,10 @@
     data () {
       return {
         items: [
-          {
-            src: 'assets/logo.png'
-          },
-          {
-            src: 'assets/rose2.JPG'
-          },
-          {
-            src: 'assets/rose3.jpeg'
-          },
-          {
-            src: 'assets/rose4.jpeg'
-          },
-          {
-            src: 'assets/rose5.jpeg'
-          }
+          {src: require('@/assets/rose1.jpg')},
+          {src: require('@/assets/rose3.jpeg')},
+          {src: require('@/assets/rose4.jpeg')},
+          {src: require('@/assets/rose5.jpeg')}
         ]
       }
     }
