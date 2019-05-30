@@ -1,9 +1,5 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-    router: {
-        base: '/ixap2i.github.io/'
-    }
-} : {}
-  
-export default {
-...routerBase
-}
+module.exports = {
+    publicPath: process.env.NODE_ENV === 'production'
+      ? '/single-page/'
+      : '/'
+  }
