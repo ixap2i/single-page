@@ -4,7 +4,7 @@
 
 # url
 
-https://ixap2i.github.io/
+https://ixap2i.github.io/single-page/
 
 ## Build Setup
 
