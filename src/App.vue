@@ -1,12 +1,14 @@
 <template>
-  <div id="app">
-    <v-avatar>
-      <v-img  style='height: 70px; width: 70px; margin-bottom: 20px;' :src="require('@/assets/person.png')" />
-    </v-avatar>
-    <router-view/>
-    <Button />
-    <h1>2019 Akane Yamashita</h1>
-  </div>
+  <v-app>
+    <div id="app">
+      <v-avatar>
+        <v-img  style='height: 70px; width: 70px; margin-bottom: 20px;' :src="require('@/assets/person.png')" />
+      </v-avatar>
+      <router-view/>
+      <Button />
+      <h1>2019 Akane Yamashita</h1>
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -26,6 +28,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background: #fff;
   color: #2c3e50;
   margin-top: 60px;
 }
@@ -37,5 +40,8 @@ h1 {
 #app .v-avatar {
   height: 70px;
   width: 70px;
+}
+i {
+  margin-right: 10px;
 }
 </style>
