@@ -10,6 +10,7 @@
         <v-btn color="green" href="https://letterneginr.hateblo.jp/">Blog</v-btn>
         <Modal/>
         <Modal2/>
+        <Modal3/>
       </v-layout>
     </div>
   </transition>
@@ -18,11 +19,12 @@
 <script>
 import Modal from '@/components/WorkHistory.vue'
 import Modal2 from '@/components/Skill.vue'
+import Modal3 from '@/components/Chart.vue'
 
 export default {
   name: 'Card',
   components: {
-    Modal, Modal2
+    Modal, Modal2, Modal3
   }
 }
 </script>
