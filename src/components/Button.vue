@@ -5,12 +5,22 @@
         align-center
         justify-space-around
         wrap>
-        <v-btn color="dark" href="https://github.com/ixap2i">Github</v-btn>
-        <v-btn color="red" href="https://www.instagram.com/umiharuno/">Instagram</v-btn>
-        <v-btn color="green" href="https://letterneginr.hateblo.jp/">Blog</v-btn>
-        <Modal/>
-        <Modal2/>
-        <Modal3/>
+        <v-flex xs4>
+          <v-btn color="cyan" href="https://github.com/ixap2i" class="github" target="_blank">
+            <i class="fab fa-github-alt"></i>
+            Github
+          </v-btn>
+          <v-btn color="red" href="https://www.instagram.com/umiharuno/" class="insta" target="_blank">
+            <i class="fas fa-hashtag"></i>
+            Instagram
+          </v-btn>
+          <v-btn color="green" href="https://letterneginr.hateblo.jp/" class="blog" target="_blank">
+            <i class="fas fa-rss-square"></i>
+            Blog
+          </v-btn>
+          <Modal/>
+          <Modal2/>
+        </v-flex>
       </v-layout>
     </div>
   </transition>
@@ -59,5 +69,20 @@ button:hover, a:hover {
   75% {
     transform: scale(0.95, 1.05);
   }
+}
+
+.github:before {
+  content: '';
+}
+.github::hover {
+
+}
+
+.insta::hover {
+
+}
+
+.blog::hover {
+
 }
 </style>
