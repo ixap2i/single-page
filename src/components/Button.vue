@@ -29,11 +29,12 @@
 <script>
 import Modal from '@/components/WorkHistory.vue'
 import Modal2 from '@/components/Skill.vue'
+import Modal3 from '@/components/Chart.vue'
 
 export default {
   name: 'Card',
   components: {
-    Modal, Modal2
+    Modal, Modal2, Modal3
   }
 }
 </script>
