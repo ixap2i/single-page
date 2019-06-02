@@ -7,7 +7,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'TopPage'
+      name: 'TopPage',
+      component: index.html
+    },
+    {
+      path: '/about',
+      name: 'AboutPage',
+      component: about.html
     }
   ]
 })

@@ -18,6 +18,12 @@
             <i class="fas fa-rss-square"></i>
             Blog
           </v-btn>
+          <a href="/about">Home</a>
+          <router-link to="/about">Go to page2</router-link>
+          <v-btn color="cyan" href="./about" target="_blank">
+          <i class="fas fa-user-shield"></i>
+            About
+          </v-btn>
           <Modal/>
           <Modal2/>
         </v-flex>
