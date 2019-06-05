@@ -44,13 +44,13 @@
               <v-card-title class="headline">客先常駐👩‍💼</v-card-title>
               <h2>SE - 主にデバッガ</h2>
               <v-card-text>
-                <h3>Java 3 / 5 / 8, JUnit, Eclipse(pleiades)</h3><br>
-                - 金融系証券システムの開発・デバッグ<br>
-                  - FileStreamクラスの実装<br>
-                  - 単体・統合テスト<br>
-                - 通信系システムの開発・デバッグ<br>
-                  - フロントエンドの改修（スタイル / 表示項目の変更など）<br>
-                  - 単体・統合テスト<br>
+                <h3>Java 3 / 5 / 8, JUnit, Eclipse(pleiades)</h3>
+                <h4>- 金融系証券システムの開発・デバッグ</h4>
+                  - FileStreamクラスの実装
+                  - 単体・統合テスト
+                <h4>- 通信系システムの開発・デバッグ</h4>
+                  - フロントエンドの改修（スタイル / 表示項目の変更など）
+                  - 単体・統合テスト
               </v-card-text>
               <v-card-text>
                 <h3>チーム規模: 3名</h3>
@@ -65,17 +65,17 @@
             </template>
             <v-card class="elevation-2">
               <v-card-title class="headline">飲食店発注サービス /
-              <br><a href="https://kitchenbrothers.jp/" target= '_blank'>
-              メディアサイト</a>の改修🍳<br>
+              <a href="https://kitchenbrothers.jp/" target= '_blank'>
+              メディアサイト</a>の改修🍳
               </v-card-title>
               <h2>Web エンジニア</h2>
               <v-card-text>
-                <h3>RoR5, jQuery, HTML5, CSS3</h3><br>
-                - 発注機能のステータス改修<br>
-                - CSVの出力機能の改修<br>
-                - 絞り込み検索機能の開発<br>
-                - フロントエンドコーディング（スタイル変更など）<br>
-                - スライダー、エフェクト付きのLPコーディング
+                <h3>RoR5, jQuery, HTML5, CSS3</h3>
+                <h4>- 発注機能のステータス改修</h4>
+                <h4>- CSVの出力機能の改修</h4>
+                <h4>- 絞り込み検索機能の開発</h4>
+                <h4>- フロントエンドコーディング（スタイル変更など）</h4>
+                <h4>- スライダー、エフェクト付きのLPコーディング</h4>
               </v-card-text>
               <v-card-text>
                 <h3>チーム規模: 3~5名</h3>
@@ -93,15 +93,18 @@
               <h2>??? - 迷走中</h2>
               <v-card-text>
                 <h3>RoR5, Angular, HTML5, CSS3, Android Studio, Kotlin ..
-                </h3><br>
-                - WebAPI, 管理画面の開発<br>
-                  - xml, CSVの出力機能の改修<br>
-                  - RSpecによるテストの自動化<br>
-                  - データの出力 / フロントエンド改修(Angular.js)<br>
-                - 法人サイトのSEO監修<br>
-                  - OGPタグ・マークアップ・サイト構造(sitemap.xml)の見直し、ブログコンテンツのパーマリンクのパス変更<br>
-                  - GoogleAnalyticsの観察・使用ブラウザ毎にレスポンシブ対応<br>
-                - ネイティブアプリの実装補助<br>
+                </h3>
+                <h4>- WebAPI, 管理画面の開発</h4>
+                 - xml, CSVの出力機能の改修 --> CSチームの業務効率化
+                 - データの出力 / フロントエンド改修 --> SPA開発
+                 - RSpecによるテストの自動化 --> WebAPIの互換性を担保・AUTODOCでの仕様のドキュメント化
+                <h4>- 法人サイトのSEO監修</h4>
+                 - OGPタグ・マークアップ・サイト構造(sitemap.xml)の見直し、ブログコンテンツのパーマリンクのパス変更
+                 - オンライン診療予約の流入を2件/日に安定化
+                 - GoogleAnalyticsの観察・使用ブラウザ毎にレスポンシブ対応
+                 - 2週間でiOSユーザーの流入を70%増加
+                <h4>- ネイティブアプリの実装補助</h4>
+                 - Kotlinを使用した新規プロジェクトのビルド
               </v-card-text>
               <v-card-text>
                 <h3>チーム規模: 5名</h3>
@@ -133,6 +136,8 @@ h3 {
 .v-card__text {
   text-align: left;
   line-height: 25px;
+  word-break: break-word;
+  white-space: pre;
 }
 </style>
 

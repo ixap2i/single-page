@@ -6,15 +6,14 @@ import 'vuetify/dist/vuetify.min.css'
 // support icons
 import '@fortawesome/fontawesome-free/css/all.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { fas } from '@fortawesome/free-solid-svg-icons'
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-library.add(fas)
+library.add(faUserSecret)
+
 Vue.config.productionTip = false
-Vue.use(Vuetify, {
-  iconfont: 'faSvg'
-})
+Vue.use(Vuetify)
 
 /* eslint-disable no-new */
 new Vue({

@@ -21,6 +21,7 @@
     "vue-meta": "^1.6.0",
     "vue-meta-info": "^0.1.7",
     "vue-router": "^3.0.1",
+    "vue-svg-loader": "^0.12.0",
     "vuetify": "^1.5.11"
   },
   "devDependencies": {
