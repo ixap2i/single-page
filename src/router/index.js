@@ -10,6 +10,22 @@ export default new Router({
       path: '/',
       name: 'TopPage'
     },
-    { path: '/', redirect: { name: About }}
-  ]
+    {path: '/', redirect: { name: About }}
+  ],
+  name: 'async',
+  metaInfo () {
+    return {
+      title: 'AKNK'
+    }
+  },
+  data () {
+    return {
+      pageName: 'loading'
+    }
+  },
+  mounted () {
+    setTimeout(() => {
+      this.pageName = 'async'
+    }, 2000)
+  }
 })

@@ -1,13 +1,16 @@
 <template>
   <v-app>
-    <div id="app">
+    <v-layout
+      align-center
+      justify-space-around
+      wrap>
       <v-avatar>
         <v-img  style='height: 70px; width: 70px; margin-bottom: 20px;' :src="require('@/assets/person.png')" />
       </v-avatar>
       <router-view/>
       <Button />
       <h1>2019 Akane Yamashita</h1>
-    </div>
+    </v-layout>
   </v-app>
 </template>
 
