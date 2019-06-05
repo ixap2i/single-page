@@ -55,7 +55,7 @@
           color="white"
           flat
           @click="dialog = false">
-          閉じる
+          close
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -68,6 +68,10 @@
 }
 .v-list--two-line .v-list__tile {
   background: #fff;
+}
+.v-dialog {
+  overflow: scroll;
+	-webkit-overflow-scrolling: touch
 }
 </style>
 
