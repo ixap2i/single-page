@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import About from '@/components/About.vue'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faCoffee)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(Router)
-Vue.use(faUserSecret)
-Vue.use(FontAwesomeIcon)
-Vue.use(library)
+
 
 export default new Router({
   routes: [
