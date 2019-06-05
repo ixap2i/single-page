@@ -115,7 +115,7 @@ export default {
           { divider: true, inset: true },
           {
             // avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Dla9btXMztmLN_QHfBBpHVk28tH4h-uoyG6XRaKg7XLy0q0VNQ',
-            title: 'html5 + css3',
+            title: 'HTML5 + CSS3',
             subtitle: "flexがすき"
           },
           { divider: true, inset: true },

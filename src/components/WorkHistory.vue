@@ -52,6 +52,9 @@
                   - フロントエンドの改修（スタイル / 表示項目の変更など）<br>
                   - 単体・統合テスト<br>
               </v-card-text>
+              <v-card-text>
+                <h3>チーム規模: 3名</h3>
+              </v-card-text>
             </v-card>
           </v-timeline-item>
           <v-timeline-item
@@ -67,12 +70,15 @@
               </v-card-title>
               <h2>Web エンジニア</h2>
               <v-card-text>
-                <h3>RoR5, jQuery, html5, css3</h3><br>
+                <h3>RoR5, jQuery, HTML5, CSS3</h3><br>
                 - 発注機能のステータス改修<br>
                 - CSVの出力機能の改修<br>
                 - 絞り込み検索機能の開発<br>
                 - フロントエンドコーディング（スタイル変更など）<br>
                 - スライダー、エフェクト付きのLPコーディング
+              </v-card-text>
+              <v-card-text>
+                <h3>チーム規模: 3~5名</h3>
               </v-card-text>
             </v-card>
           </v-timeline-item>
@@ -86,16 +92,19 @@
               <v-card-title class="headline">オンライン診療サービス🏥</v-card-title>
               <h2>??? - 迷走中</h2>
               <v-card-text>
-                <h3>RoR5, angular.js, html5, css3, Android Studio, Kotlin ..
+                <h3>RoR5, Angular, HTML5, CSS3, Android Studio, Kotlin ..
                 </h3><br>
                 - WebAPI, 管理画面の開発<br>
                   - xml, CSVの出力機能の改修<br>
-                  - Rspecによるテストの自動化<br>
+                  - RSpecによるテストの自動化<br>
                   - データの出力 / フロントエンド改修(Angular.js)<br>
                 - 法人サイトのSEO監修<br>
                   - OGPタグ・マークアップ・サイト構造(sitemap.xml)の見直し、ブログコンテンツのパーマリンクのパス変更<br>
                   - GoogleAnalyticsの観察・使用ブラウザ毎にレスポンシブ対応<br>
                 - ネイティブアプリの実装補助<br>
+              </v-card-text>
+              <v-card-text>
+                <h3>チーム規模: 5名</h3>
               </v-card-text>
             </v-card>
           </v-timeline-item>
@@ -119,7 +128,7 @@ h3, .v-card__title {
   text-align: center;
 }
 h3 {
-  border-bottom: 10px solid orange;
+  border-bottom: 5px solid orange;
 }
 .v-card__text {
   text-align: left;
