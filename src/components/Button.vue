@@ -1,6 +1,4 @@
 <template>
-  <transition name="fade">
-    <div>
       <v-flex xs4>
         <v-btn color="cyan" href="https://github.com/ixap2i" class="github" target="_blank">
           <i class="fab fa-github-alt"></i>
@@ -17,8 +15,6 @@
         <Modal/>
         <Modal2/>
       </v-flex>
-    </div>
-  </transition>
 </template>
 
 <script>
