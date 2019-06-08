@@ -113,6 +113,75 @@
           </v-timeline-item>
         </v-timeline>
       </template>
+
+
+      <v-card class="elevation-3">
+        <v-card-title class="headline">継続支援B型👩‍🏫</v-card-title>
+        <h2>生活支援員（社会福祉士）</h2>
+        <v-card-text>
+          - 高次機能障害・ADHD・軽度知的障害を持つものに対して職業指導などを実施
+        </v-card-text>
+      </v-card>
+
+      <v-card class="elevation-3">
+        <v-card-title class="headline">客先常駐👩‍💼</v-card-title>
+        <h2>SE - 主にデバッガ</h2>
+        <v-card-text>
+          <h3>Java 3 / 5 / 8, JUnit, Eclipse(pleiades)</h3>
+          <h4>- 金融系証券システムの開発・デバッグ</h4>
+            - FileStreamクラスの実装<br>
+            - 単体・統合テスト
+          <h4>- 通信系システムの開発・デバッグ</h4>
+            - フロントエンドの改修（スタイル / 表示項目の変更など）<br>
+            - 単体・統合テスト
+        </v-card-text>
+        <v-card-text>
+          <h3>チーム規模: 3名</h3>
+        </v-card-text>
+      </v-card>
+
+      <v-card class="elevation-3">
+        <v-card-title class="headline">飲食店発注サービス /
+        <a href="https://kitchenbrothers.jp/" target= '_blank'>
+        メディアサイト</a>の改修🍳
+        </v-card-title>
+        <h2>Web エンジニア</h2>
+        <v-card-text>
+          <h3>RoR5, jQuery, HTML5, CSS3</h3>
+          <h4>- 発注機能のステータス改修</h4>
+          <h4>- CSVの出力機能の改修</h4>
+          <h4>- 絞り込み検索機能の開発</h4>
+          <h4>- フロントエンドコーディング（スタイル変更など）</h4>
+          <h4>- スライダー、エフェクト付きのLPコーディング</h4>
+        </v-card-text>
+        <v-card-text>
+          <h3>チーム規模: 3~5名</h3>
+        </v-card-text>
+      </v-card>
+
+      <v-card class="elevation-3">
+        <v-card-title class="headline">オンライン診療サービス🏥</v-card-title>
+        <h2>??? - 迷走中</h2>
+        <v-card-text>
+          <h3>RoR5, Angular, HTML5, CSS3, Android Studio, Kotlin ..
+          </h3>
+          <h4>- WebAPI, 管理画面の開発</h4>
+            &nbsp;&nbsp;- xml, CSVの出力機能の改修 --> CSチームの業務効率化<br>
+            &nbsp;&nbsp;- データの出力 / フロントエンド改修 --> SPA開発<br>
+            &nbsp;&nbsp;- RSpecによるテストの自動化 --> WebAPIの互換性を担保・AUTODOCでの仕様のドキュメント化<br>
+          <h4>- 法人サイトのSEO監修</h4>
+            &nbsp;&nbsp;- OGPタグ・マークアップ・サイト構造(sitemap.xml)の見直し、ブログコンテンツのパーマリンクのパス変更<br>
+            &nbsp;&nbsp;- オンライン診療予約の流入を2件/日に安定化<br>
+            &nbsp;&nbsp;- GoogleAnalyticsの観察・使用ブラウザ毎にレスポンシブ対応<br>
+            &nbsp;&nbsp;- 2週間でiOSユーザーの流入を70%増加
+          <h4>- ネイティブアプリの実装補助</h4>
+          &nbsp;&nbsp;- Kotlinを使用した新規プロジェクトのビルド
+        </v-card-text>
+        <v-card-text>
+          <h3>チーム規模: 5名</h3>
+        </v-card-text>
+      </v-card>
+
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn
@@ -141,6 +210,20 @@ h3 {
 .v-dialog {
   overflow: scroll;
 	-webkit-overflow-scrolling: touch
+}
+
+@media screen and (max-width: 1024px) and (min-width: 896px) and (orientation: portrait) { 
+  .elevation-3.v-card.v-sheet.theme--light {
+    display: none;
+  }
+}
+@media screen and (max-width: 896px) and (min-width: 375px) and (orientation: portrait) { 
+  .v-timeline-item, .v-timeline:before {
+    display: none;
+  }
+  .v-card__title.headline {
+    padding: 40px;
+  }
 }
 </style>
 

@@ -73,6 +73,12 @@
   overflow: scroll;
 	-webkit-overflow-scrolling: touch
 }
+
+@media screen and (max-width: 896px) and (min-width: 375px) and (orientation: portrait) { 
+  .v-timeline-item, .v-timeline:before {
+    display: none;
+  }
+}
 </style>
 
 <script>
