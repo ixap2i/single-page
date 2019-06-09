@@ -16,6 +16,10 @@
       <i class="far fa-clipboard"></i>
       Resume
     </v-btn>
+    <v-btn color="pink" href="https://www.slideshare.net/ssuser34abd0" class="resume" target="_blank">
+      <i class="fab fa-slideshare"></i>
+      SlideShare
+    </v-btn>
     <Modal/>
     <Modal2/>
   </v-flex>
