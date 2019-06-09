@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import 'vuetify/dist/vuetify.min.css' 
 
 library.add(faCoffee)
-// Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(Router)
 
 

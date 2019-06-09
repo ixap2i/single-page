@@ -1,4 +1,7 @@
 'use strict'
 module.exports = {
-  NODE_ENV: '"production"'
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/single-page/'
+  : '/'
+  // NODE_ENV: '"production"'
 }
