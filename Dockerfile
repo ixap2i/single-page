@@ -5,4 +5,5 @@ WORKDIR /app
 RUN apk update && \
     npm install -g npm vue-cli
 
-RUN apk add git nano openssh
+RUN apk add git nano openssh less
+RUN export LESSCHARSET=utf-8
