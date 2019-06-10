@@ -1,8 +1,8 @@
 # vue-app
 
-> A Vue.js project
+This is just a portfolio of ixap2i.
 
-# url
+# deployed here
 
 https://ixap2i.github.io/single-page/
 
