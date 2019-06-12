@@ -9,7 +9,7 @@
       </v-avatar>
       <router-view/>
       <Button />
-      <h1>2019 Akane Yamashita</h1>
+      <h1>2020 Akane Yamashita</h1>
     </v-layout>
   </v-app>
 </template>

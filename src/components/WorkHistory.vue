@@ -70,7 +70,7 @@
               </v-card-title>
               <h2>Web エンジニア</h2>
               <v-card-text>
-                <h3>RoR5, jQuery, HTML5, CSS3</h3>
+                <h3>Ruby on Rails5, jQuery, HTML5, CSS3</h3>
                 <h4>- 発注機能のステータス改修</h4>
                 <h4>- CSVの出力機能の改修</h4>
                 <h4>- 絞り込み検索機能の開発</h4>
@@ -83,16 +83,16 @@
             </v-card>
           </v-timeline-item>
           <v-timeline-item
-            color="red lighten-1"
+            color="red lighten-2"
             large>
             <template v-slot:opposite>
-              <span>2018.12 ~ now</span>
+              <span>2018.12 ~ 2019.07</span>
             </template>
             <v-card class="elevation-2">
               <v-card-title class="headline">オンライン診療サービス🏥</v-card-title>
-              <h2>??? - 迷走中</h2>
+              <h2>Webエンジニア</h2>
               <v-card-text>
-                <h3>RoR5, Angular, HTML5, CSS3, Android Studio, Kotlin ..
+                <h3>Ruby on Rails5, Angular, HTML5, CSS3, Android Studio, Kotlin ..
                 </h3>
                 <h4>- WebAPI, 管理画面の開発</h4>
                  &nbsp;&nbsp;- xml, CSVの出力機能の改修 --> CSチームの業務効率化<br>
@@ -111,9 +111,32 @@
               </v-card-text>
             </v-card>
           </v-timeline-item>
+
+          <v-timeline-item
+            color="red lighten-1"
+            large>
+            <template v-slot:opposite>
+              <span>2019.8 ~ 2020.07</span>
+            </template>
+            <v-card class="elevation-2">
+              <v-card-title class="headline">プライシングツール /
+              <a href="" target= '_blank'>
+              プライシングツール</a>の開発🔎
+              </v-card-title>
+              <h2>Web エンジニア</h2>
+              <v-card-text>
+                <h3>Java8, Spring Framework, Kotlin, AWS, Vue.js...</h3>
+                <h4>- Vue.jsで構築されたUIの機能改善</h4>
+                <h4>- クローリング機能をデータ閲覧ページに追加</h4>
+                <h4>- クロール先のサイト構造に合わせてクローラーを追加</h4>
+              </v-card-text>
+              <v-card-text>
+                <h3>チーム規模: 3~5名</h3>
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
         </v-timeline>
       </template>
-
 
       <v-card class="elevation-3">
         <v-card-title class="headline">継続支援B型👩‍🏫</v-card-title>
@@ -147,7 +170,7 @@
         </v-card-title>
         <h2>Web エンジニア</h2>
         <v-card-text>
-          <h3>RoR5, jQuery, HTML5, CSS3</h3>
+          <h3>Ruby on Rails5, jQuery, Coffee Script, HTML5, CSS3</h3>
           <h4>- 発注機能のステータス改修</h4>
           <h4>- CSVの出力機能の改修</h4>
           <h4>- 絞り込み検索機能の開発</h4>
@@ -160,10 +183,12 @@
       </v-card>
 
       <v-card class="elevation-3">
-        <v-card-title class="headline">オンライン診療サービス🏥</v-card-title>
-        <h2>??? - 迷走中</h2>
+        <v-card-title class="headline">オンライン診療サービス🏥 /
+        <a href="https://mejiroekimae.com/" target= '_blank'>
+        法人サイトのSEO改善</a></v-card-title>
+        <h2>Webエンジニア</h2>
         <v-card-text>
-          <h3>RoR5, Angular, HTML5, CSS3, Android Studio, Kotlin ..
+          <h3>Ruby on Rails5, Angular, HTML5, CSS3, Android Studio, Kotlin ..
           </h3>
           <h4>- WebAPI, 管理画面の開発</h4>
             &nbsp;&nbsp;- xml, CSVの出力機能の改修 --> CSチームの業務効率化<br>
@@ -182,10 +207,26 @@
         </v-card-text>
       </v-card>
 
+      <v-card class="elevation-3">
+        <v-card-title class="headline">プライシングツール /
+        <a href="" target= '_blank'>
+        プライシングツール</a>の開発🔎
+        </v-card-title>
+        <h2>Web エンジニア</h2>
+        <v-card-text>
+          <h3>Java8, Spring Framework, Kotlin, AWS, Vue.js...</h3>
+          <h4>- Vue.jsで構築されたUIの機能改善</h4>
+          <h4>- クローリング機能をデータ閲覧ページに追加</h4>
+          <h4>- クロール先のサイト構造に合わせてクローラーを追加</h4>
+        </v-card-text>
+        <v-card-text>
+          <h3>チーム規模: 3~5名</h3>
+        </v-card-text>
+      </v-card>
+
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn
-          color="white"
           flat
           @click="dialog = false">
           close
@@ -209,15 +250,15 @@ h3 {
 }
 .v-dialog {
   overflow: scroll;
-	-webkit-overflow-scrolling: touch
+  -webkit-overflow-scrolling: touch;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 896px) and (orientation: portrait) { 
+@media screen and (min-width: 896px) and (min-width: 500px) {
   .elevation-3.v-card.v-sheet.theme--light {
     display: none;
   }
 }
-@media screen and (max-width: 896px) and (min-width: 375px) and (orientation: portrait) { 
+@media screen and (max-width: 896px) and (min-width: 365px) {
   .v-timeline-item, .v-timeline:before {
     display: none;
   }
@@ -228,12 +269,7 @@ h3 {
 </style>
 
 <script>
-import VueMarkdown from 'vue-markdown'
-
 export default {
-  components: {
-    VueMarkdown
-  },
   data () {
     return {
       dialog: false

@@ -35,8 +35,7 @@
           <v-list-tile
             v-else
             :key="item.title"
-            avatar
-            @click="">
+            avatar>
             <v-list-tile-avatar>
               <img :src="item.avatar">
             </v-list-tile-avatar>
@@ -48,11 +47,10 @@
           </v-list-tile>
         </template>
       </v-list>
-      
+
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn
-          color="white"
           flat
           @click="dialog = false">
           close
@@ -71,10 +69,10 @@
 }
 .v-dialog {
   overflow: scroll;
-	-webkit-overflow-scrolling: touch
+  -webkit-overflow-scrolling: touch;
 }
 
-@media screen and (max-width: 896px) and (min-width: 375px) and (orientation: portrait) { 
+@media screen and (max-width: 896px) and (min-width: 375px) and (orientation: portrait) {
   .v-timeline-item, .v-timeline:before {
     display: none;
   }
@@ -92,48 +90,48 @@ export default {
     return {
       dialog: false,
       items: [
-          {
-            avatar: 'https://img.icons8.com/nolan/64/000000/ruby-programming-language.png',
-            title: 'Ruby on Rails',
-            subtitle: "まあまあ…？"
-          },
-          { divider: true, inset: true },
-          {
-            avatar: 'https://img.icons8.com/ios/50/000000/v.png',
-            title: 'Vue.js',
-            subtitle: "ちょっぴり"
-          },
-          { divider: true, inset: true },
-          {
-            avatar: 'https://img.icons8.com/nolan/64/000000/android-tablet.png',
-            title: 'Kotlin',
-            subtitle: "型推論便利だぴよぴよ"
-          },
-          { divider: true, inset: true },
-          {
-            avatar: 'https://img.icons8.com/ios/50/000000/angularjs-filled.png',
-            title: 'angular.js',
-            subtitle: "ちょっとだけ"
-          },
-          { divider: true, inset: true },
-          {
-            avatar: 'https://img.icons8.com/dusk/64/000000/wordpress.png',
-            title: 'php + WordPress',
-            subtitle: "SEOちょっぴり"
-          },
-          { divider: true, inset: true },
-          {
-            avatar: 'https://img.icons8.com/ios/50/000000/code-file-filled.png',
-            title: 'HTML5 + CSS3',
-            subtitle: "flexがすき"
-          },
-          { divider: true, inset: true },
-          {
-            avatar: require('@/assets/icons8-docker-48.png'),
-            title: 'Docker',
-            subtitle: "便利！"
-          }
-        ]
+        {
+          avatar: 'https://img.icons8.com/nolan/64/000000/ruby-programming-language.png',
+          title: 'Ruby on Rails',
+          subtitle: 'まあまあ…？'
+        },
+        { divider: true, inset: true },
+        {
+          avatar: 'https://img.icons8.com/ios/50/000000/v.png',
+          title: 'Vue.js',
+          subtitle: 'ちょっぴり'
+        },
+        { divider: true, inset: true },
+        {
+          avatar: 'https://img.icons8.com/nolan/64/000000/android-tablet.png',
+          title: 'Kotlin',
+          subtitle: '型推論便利だぴよぴよ'
+        },
+        { divider: true, inset: true },
+        {
+          avatar: 'https://img.icons8.com/ios/50/000000/angularjs-filled.png',
+          title: 'angular.js',
+          subtitle: 'ちょっとだけ'
+        },
+        { divider: true, inset: true },
+        {
+          avatar: 'https://img.icons8.com/dusk/64/000000/wordpress.png',
+          title: 'php + WordPress',
+          subtitle: 'SEOちょっぴり'
+        },
+        { divider: true, inset: true },
+        {
+          avatar: 'https://img.icons8.com/ios/50/000000/code-file-filled.png',
+          title: 'HTML5 + CSS3',
+          subtitle: 'flexがすき'
+        },
+        { divider: true, inset: true },
+        {
+          avatar: require('@/assets/icons8-docker-48.png'),
+          title: 'Docker',
+          subtitle: '便利！'
+        }
+      ]
     }
   }
 }
