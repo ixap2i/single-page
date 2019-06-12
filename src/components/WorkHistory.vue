@@ -185,7 +185,6 @@
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn
-          color="white"
           flat
           @click="dialog = false">
           close
@@ -209,15 +208,15 @@ h3 {
 }
 .v-dialog {
   overflow: scroll;
-	-webkit-overflow-scrolling: touch
+	-webkit-overflow-scrolling: touch;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 896px) and (orientation: portrait) { 
+@media screen and (min-width: 896px) and (min-width: 500px) {
   .elevation-3.v-card.v-sheet.theme--light {
     display: none;
   }
 }
-@media screen and (max-width: 896px) and (min-width: 375px) and (orientation: portrait) { 
+@media screen and (max-width: 896px) and (min-width: 365px) {
   .v-timeline-item, .v-timeline:before {
     display: none;
   }
