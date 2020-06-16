@@ -86,7 +86,7 @@
             color="red lighten-2"
             large>
             <template v-slot:opposite>
-              <span>2018.12 ~ 2019.07</span>
+              <span>2018.12 ~ 2019.05</span>
             </template>
             <v-card class="elevation-2">
               <v-card-title class="headline">オンライン診療サービス🏥</v-card-title>
@@ -116,7 +116,7 @@
             color="red lighten-1"
             large>
             <template v-slot:opposite>
-              <span>2019.8 ~ 2020.07</span>
+              <span>2019.8 ~ 2020.05</span>
             </template>
             <v-card class="elevation-2">
               <v-card-title class="headline">プライシングツール /
