@@ -15,7 +15,7 @@
       <v-card-title
         class="headline success lighten-2"
         primary-title>
-        Skills - エンジニア技術
+        Skills - 技術セットについて
       </v-card-title>
 
       <v-list two-line>
@@ -93,43 +93,37 @@ export default {
         {
           avatar: 'https://img.icons8.com/nolan/64/000000/ruby-programming-language.png',
           title: 'Ruby on Rails',
-          subtitle: 'まあまあ…？'
+          subtitle: '5.0~プロジェクトで関わっています'
         },
         { divider: true, inset: true },
         {
           avatar: 'https://img.icons8.com/ios/50/000000/v.png',
           title: 'Vue.js',
-          subtitle: 'ちょっぴり'
-        },
-        { divider: true, inset: true },
-        {
-          avatar: 'https://img.icons8.com/nolan/64/000000/android-tablet.png',
-          title: 'Kotlin',
-          subtitle: '型推論便利だぴよぴよ'
+          subtitle: ''
         },
         { divider: true, inset: true },
         {
           avatar: 'https://img.icons8.com/ios/50/000000/angularjs-filled.png',
-          title: 'angular.js',
-          subtitle: 'ちょっとだけ'
+          title: 'Angular.js',
+          subtitle: '業務ではバージョン2を使ってました / 9で自作アプリ作成中です'
         },
         { divider: true, inset: true },
         {
           avatar: 'https://img.icons8.com/dusk/64/000000/wordpress.png',
           title: 'php + WordPress',
-          subtitle: 'SEOちょっぴり'
+          subtitle: 'SEO + デザイン変更の経験があります'
         },
         { divider: true, inset: true },
         {
           avatar: 'https://img.icons8.com/ios/50/000000/code-file-filled.png',
           title: 'HTML5 + CSS3',
-          subtitle: 'flexがすき'
+          subtitle: 'flexbox便利ですよねー。'
         },
         { divider: true, inset: true },
         {
           avatar: require('@/assets/icons8-docker-48.png'),
           title: 'Docker',
-          subtitle: '便利！'
+          subtitle: '初心者です'
         }
       ]
     }
