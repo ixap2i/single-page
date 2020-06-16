@@ -4,17 +4,9 @@
       <i class="fab fa-github-alt"></i>
       Github
     </v-btn>
-    <v-btn color="red" href="https://www.instagram.com/umiharuno/" class="insta" target="_blank">
-      <i class="fas fa-hashtag"></i>
-      Instagram
-    </v-btn>
     <v-btn color="green" href="https://letterneginr.hateblo.jp/" class="blog" target="_blank">
       <i class="fas fa-rss-square"></i>
       Blog
-    </v-btn>
-    <v-btn color="gray" href="https://gist.github.com/ixap2i/7b14bfd413dc4ab3e2b680de5e898c0e" class="resume" target="_blank">
-      <i class="far fa-clipboard"></i>
-      Resume
     </v-btn>
     <v-btn color="pink" href="https://www.slideshare.net/ssuser34abd0" class="resume" target="_blank">
       <i class="fab fa-slideshare"></i>
@@ -22,17 +14,19 @@
     </v-btn>
     <Modal/>
     <Modal2/>
+    <Modal3 />
   </v-flex>
 </template>
 
 <script>
 import Modal from '@/components/WorkHistory.vue'
 import Modal2 from '@/components/Skill.vue'
+import Modal3 from '@/components/Portfolio.vue'
 
 export default {
   name: 'Card',
   components: {
-    Modal, Modal2
+    Modal, Modal2, Modal3
   }
 }
 </script>
