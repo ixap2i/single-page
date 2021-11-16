@@ -5,7 +5,7 @@
       justify-space-around
       wrap>
       <v-avatar>
-        <v-img :src="require('@/assets/top.png')" />
+        <v-img :src="require('../assets/top.png')" />
       </v-avatar>
       <router-view/>
       <Button />
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Button from '@/components/Button.vue'
+import Button from '../src/components/Button.vue'
 
 export default {
   name: 'App',

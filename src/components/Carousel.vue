@@ -9,16 +9,16 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        items: [
-          {src: require('@/assets/rose1.jpg')},
-          {src: require('@/assets/rose3.jpeg')},
-          {src: require('@/assets/rose4.jpeg')},
-          {src: require('@/assets/rose5.jpeg')}
-        ]
-      }
+export default {
+  data () {
+    return {
+      items: [
+        {src: require('../assets/rose1.jpg')},
+        {src: require('../assets/rose3.jpeg')},
+        {src: require('../assets/rose4.jpeg')},
+        {src: require('../assets/rose5.jpeg')}
+      ]
     }
   }
+}
 </script>

@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import Modal from '@/components/WorkHistory.vue'
-import Modal2 from '@/components/Skill.vue'
-import Modal3 from '@/components/Portfolio.vue'
+import Modal from '../components/WorkHistory.vue'
+import Modal2 from '../components/Skill.vue'
+import Modal3 from '../components/Portfolio.vue'
 
 export default {
   name: 'Card',
