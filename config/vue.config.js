@@ -1,5 +1,9 @@
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production'
-      ? '/single-page/'
-      : '/'
+
+  configureWebpack: {
+    devServer: {
+      historyApiFallback: true
+    }
   }
+
+}

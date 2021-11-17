@@ -1,38 +1,33 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import About from '@/components/About.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import 'vuetify/dist/vuetify.min.css'
-
+const { createApp, h } = Vue
 library.add(faCoffee)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.use(Router)
 
-export default new Router({
-  mode: 'history',
-  routes: [
-    {
-      path: '/',
-      name: 'TopPage'
-    },
-    {path: '/', redirect: { name: About }}
-  ],
-  name: 'async',
-  metaInfo () {
-    return {
-      title: 'AKNK'
+const NotFoundComponent = { template: '<p>Page not found</p>' }
+const HomeComponent = { template: '<p>Home page</p>' }
+const AboutComponent = { template: '<p>About page</p>' }
+
+const routes = {
+  '/': HomeComponent,
+  '/about': AboutComponent
+}
+
+const SimpleRouter = {
+  data: () => ({
+    currentRoute: window.location.pathname
+  }),
+
+  computed: {
+    CurrentComponent () {
+      return routes[this.currentRoute] || NotFoundComponent
     }
   },
-  data () {
-    return {
-      pageName: 'loading'
-    }
-  },
-  mounted () {
-    setTimeout(() => {
-      this.pageName = 'async'
-    }, 2000)
+
+  render () {
+    return h(this.CurrentComponent)
   }
-})
+}
+
+createApp(SimpleRouter).mount('#app')
