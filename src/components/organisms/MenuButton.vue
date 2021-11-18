@@ -3,31 +3,25 @@
   <!-- fab placed in the center of the content with a list on each side -->
   <ion-fab vertical="center" horizontal="center" slot="fixed">
     <ion-fab-button>
-      <ion-icon name="share"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
       <ion-fab-button>
         <span @click="pushLink('skill')">skill</span>
-        <ion-icon name="logo-vimeo">test</ion-icon>
       </ion-fab-button>
     </ion-fab-list>
     <ion-fab-list side="bottom">
       <ion-fab-button>
-        <span @click="pushLink('about')">about</span>
-        <ion-icon name="logo-facebook">
-        </ion-icon>
+        <span @click="pushLink('portfolio')">portfolio</span>
       </ion-fab-button>
     </ion-fab-list>
     <ion-fab-list side="start">
       <ion-fab-button>
         <span @click="pushLink('job')">job</span>
-        <ion-icon name="logo-instagram">test</ion-icon>
       </ion-fab-button>
     </ion-fab-list>
     <ion-fab-list side="end">
       <ion-fab-button>
         <span href='/' @click="pushLink('/')">top</span>
-        <ion-icon name="logo-twitter"></ion-icon>
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
