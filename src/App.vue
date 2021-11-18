@@ -1,6 +1,12 @@
 <template>
   <v-app>
-    <ion-badge>99</ion-badge>
+    <ion-avatar>
+      <img src="./assets/icon.jpeg">
+    </ion-avatar>
+    <ion-text color="secondary">
+      <h1>I'm a web developer.</h1>
+    </ion-text>
+
     <v-layout
       align-center
       justify-space-around
@@ -10,17 +16,31 @@
       </v-avatar>
       <router-view/>
       <Button />
-      <h1>2020 Akane Yamashita</h1>
+      <h1>2021 Akane Yamashita</h1>
+      <MenuButton/>
     </v-layout>
   </v-app>
 </template>
 
 <script>
 // import Button from '../src/components/Button.vue'
-import { IonBadge, IonItem, IonLabel } from '@ionic/vue'
+import {
+  IonAvatar, IonChip, IonText,
+  IonCol, IonGrid, IonRow
+} from '@ionic/vue'
+import MenuButton from '../src/components/organisms/MenuButton.vue'
 import { defineComponent } from 'vue'
 export default defineComponent({
-  components: { IonBadge, IonItem, IonLabel }
+  components: {
+    IonAvatar,
+    IonChip,
+    IonText,
+    IonCol,
+    IonGrid,
+    IonRow,
+
+    MenuButton
+  }
 })
 </script>
 

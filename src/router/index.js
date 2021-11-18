@@ -1,7 +1,18 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router'
+const About = () => import('../components/About.vue')
+const Job = () => import('../components/Job.vue')
+const Skill = () => import('../components/pages/Skill.vue')
 
 const routes = [
-  // routes go here
+  { path: '/about',
+    component: About
+  },
+  { path: '/skill',
+    component: Skill
+  },
+  { path: '/job',
+    component: Job
+  }
 ]
 
 const router = createRouter({

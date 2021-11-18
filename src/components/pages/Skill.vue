@@ -121,7 +121,7 @@ export default {
         },
         { divider: true, inset: true },
         {
-          avatar: require('../assets/icons8-docker-48.png'),
+          avatar: '',
           title: 'Docker',
           subtitle: '初心者です'
         }

@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import Modal from '../components/WorkHistory.vue'
-import Modal2 from '../components/Skill.vue'
+import Modal from './Job.vue'
+import Modal2 from './pages/Skill.vue'
 import Modal3 from '../components/Portfolio.vue'
 
 export default {
