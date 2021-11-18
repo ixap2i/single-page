@@ -1,77 +1,42 @@
 <template>
-  <v-dialog
-    v-model="dialog">
-    <template v-slot:activator="{ on }">
-      <v-btn
-        color="info"
-        dark
-        v-on="on">
-        <i class="fas fa-code"></i>
-        Skills
-      </v-btn>
-    </template>
+  <i class="fa fa-pencil"></i>
+  Skill
 
-    <v-card>
-      <v-card-title
-        class="headline success lighten-2"
-        primary-title>
-        Skills - 技術セットについて
-      </v-card-title>
+  <v-card>
+    <v-list two-line>
+      <template v-for="(item, index) in items">
+        <v-subheader
+          v-if="item.header"
+          :key="item.header"
+        >
+          {{ item.header }}
+        </v-subheader>
 
-      <v-list two-line>
-        <template v-for="(item, index) in items">
-          <v-subheader
-            v-if="item.header"
-            :key="item.header"
-          >
-            {{ item.header }}
-          </v-subheader>
+        <v-divider
+          v-else-if="item.divider"
+          :key="index"
+          :inset="item.inset"></v-divider>
 
-          <v-divider
-            v-else-if="item.divider"
-            :key="index"
-            :inset="item.inset"></v-divider>
+        <v-list-tile
+          v-else
+          :key="item.title"
+          avatar>
+          <v-list-tile-avatar>
+            <img :src="item.avatar">
+          </v-list-tile-avatar>
 
-          <v-list-tile
-            v-else
-            :key="item.title"
-            avatar>
-            <v-list-tile-avatar>
-              <img :src="item.avatar">
-            </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title v-html="item.title"></v-list-tile-title>
+            <v-list-tile-sub-title v-html="item.subtitle"></v-list-tile-sub-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </template>
+    </v-list>
 
-            <v-list-tile-content>
-              <v-list-tile-title v-html="item.title"></v-list-tile-title>
-              <v-list-tile-sub-title v-html="item.subtitle"></v-list-tile-sub-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </template>
-      </v-list>
-
-      <v-card-actions>
-        <v-spacer></v-spacer>
-        <v-btn
-          flat
-          @click="dialog = false">
-          close
-        </v-btn>
-      </v-card-actions>
-    </v-card>
-  </v-dialog>
+  </v-card>
 </template>
 
 <style>
-.v-list--two-line .v-list__tile::hover {
-  background: linear-gradient(to right, lightpink, #f8fc8d);
-}
-.v-list--two-line .v-list__tile {
-  background: #fff;
-}
-.v-dialog {
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-
 @media screen and (max-width: 896px) and (min-width: 375px) and (orientation: portrait) {
   .v-timeline-item, .v-timeline:before {
     display: none;
