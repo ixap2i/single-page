@@ -12,7 +12,6 @@
       justify-space-around
       wrap>
       <v-avatar>
-        <!-- <v-img src="../assets/top.png" /> -->
       </v-avatar>
       <router-view/>
       <Button />
@@ -23,7 +22,6 @@
 </template>
 
 <script>
-// import Button from '../src/components/Button.vue'
 import {
   IonAvatar, IonChip, IonText,
   IonCol, IonGrid, IonRow

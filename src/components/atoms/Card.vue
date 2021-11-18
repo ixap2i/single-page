@@ -1,8 +1,20 @@
 <template>
   <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>{{term}}</ion-card-subtitle>
+      <ion-card-subtitle>
+        <template v-if="link">
+          <a :href="term" target="_blank">
+            {{ term }}
+          </a>
+        </template>
+        <template v-else>
+          {{ term }}
+        </template>
+      </ion-card-subtitle>
       <ion-card-title :projectName='setProjectName'>{{projectName}}</ion-card-title>
+      <ion-avatar>
+        <img :src="img">
+      </ion-avatar>
     </ion-card-header>
 
     <ion-card-content>
@@ -24,7 +36,9 @@ export default defineComponent({
   props: {
     projectName: String,
     projectDescription: String,
-    term: String
+    term: String,
+    img: String,
+    link: Boolean
   }
 })
 </script>
