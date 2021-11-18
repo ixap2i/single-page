@@ -14,8 +14,8 @@
         primary-title>
         Portfolio - 今まで作ったものたち(クリックで別窓出ます)
       </v-card-title>
-      <template v-for="(item, index) in items">
-        <v-list two-line :key="item.header">
+      <!-- <template v-for="(item, index) in items" :key="item.header">
+        <v-list>
           <v-subheader
             v-if="item.header"
             :key="item.header"
@@ -44,7 +44,7 @@
               </v-list-tile>
 
         </v-list>
-      </template>
+      </template> -->
 
       <v-card-actions>
         <v-spacer></v-spacer>

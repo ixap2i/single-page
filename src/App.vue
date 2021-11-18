@@ -5,7 +5,7 @@
       justify-space-around
       wrap>
       <v-avatar>
-        <v-img :src="require('../assets/top.png')" />
+        <!-- <v-img src="../assets/top.png" /> -->
       </v-avatar>
       <router-view/>
       <Button />
