@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <ion-badge>99</ion-badge>
     <v-layout
       align-center
       justify-space-around
@@ -15,14 +16,12 @@
 </template>
 
 <script>
-import Button from '../src/components/Button.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Button
-  }
-}
+// import Button from '../src/components/Button.vue'
+import { IonBadge, IonItem, IonLabel } from '@ionic/vue'
+import { defineComponent } from 'vue'
+export default defineComponent({
+  components: { IonBadge, IonItem, IonLabel }
+})
 </script>
 
 <style>

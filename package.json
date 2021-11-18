@@ -15,6 +15,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
+    "@ionic/vue-router": "^5.9.1",
     "@vue/compat": "^3.2.22",
     "eslint-loader": "^2.1.2",
     "html-webpack-harddisk-plugin": "^2.0.0",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "@ionic/vue": "^5.9.1",
     "@vue/compiler-sfc": "^3.2.22",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",

@@ -1,14 +1,13 @@
-import Vue from 'vue'
-import App from './App'
-// support icons
-import '@fortawesome/fontawesome-free/css/all.css'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { IonicVue } from '@ionic/vue'
+import { createApp } from 'vue'
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
-library.add(faUserSecret)
+import App from './App.vue'
+import router from './router'
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
+const app = createApp(App)
+  .use(IonicVue)
+  .use(router)
+
+router.isReady().then(() => {
+  app.mount('#app')
+})
