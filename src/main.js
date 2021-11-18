@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import App from './App'
-import vuetify from './plugins/vuetify'
 // support icons
 import '@fortawesome/fontawesome-free/css/all.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -11,6 +10,5 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 library.add(faUserSecret)
 
 new Vue({
-  render: h => h(App),
-  vuetify
+  render: h => h(App)
 }).$mount('#app')
