@@ -22,7 +22,6 @@
     "marked": "^0.6.3",
     "tapable": "^1.0.0-beta.5",
     "vue": "^3.2.22",
-    "vue-markdown": "^2.2.4",
     "vue-meta": "^1.6.0",
     "vue-svg-loader": "^0.12.0",
     "vuex": "^4.0.2"
