@@ -1,18 +1,17 @@
 <template>
-  <i class="fas fa-motorcycle"></i>
-  Portfolio
-
-  <template v-for="item in items">
+  <div>
+    <i class="fas fa-motorcycle"></i>
+    Portfolio
     <card
+      v-for="item in items"
+      :key="item.title"
       :projectName="item.title"
       :projectDescription="item.subtitle"
       :term="item.link"
       :img="item.avatar"
       :link="true">
     </card>
-  </template>
-
-  <infinite-scroll-content></infinite-scroll-content>
+  </div>
 </template>
 
 <style>
@@ -20,10 +19,9 @@
 
 <script>
 import Card from '../atoms/Card.vue'
-import InfiniteScrollContent from '../organisms/InfiniteScrollContent.vue'
 export default {
   components: {
-    Card, InfiniteScrollContent
+    Card
   },
   data () {
     return {

@@ -1,47 +1,13 @@
 <template>
-  <i class="fa fa-pencil"></i>
-  Skill
+  <div>
+    <i class="fa fa-address-card" aria-hidden="true"></i>
+    Skill
 
-  <v-card>
-    <v-list two-line>
-      <template v-for="(item, index) in items">
-        <v-subheader
-          v-if="item.header"
-          :key="item.header"
-        >
-          {{ item.header }}
-        </v-subheader>
-
-        <v-divider
-          v-else-if="item.divider"
-          :key="index"
-          :inset="item.inset"></v-divider>
-
-        <v-list-tile
-          v-else
-          :key="item.title"
-          avatar>
-          <v-list-tile-avatar>
-            <img :src="item.avatar">
-          </v-list-tile-avatar>
-
-          <v-list-tile-content>
-            <v-list-tile-title v-html="item.title"></v-list-tile-title>
-            <v-list-tile-sub-title v-html="item.subtitle"></v-list-tile-sub-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </template>
-    </v-list>
-
-  </v-card>
+  </div>
 </template>
 
 <style>
-@media screen and (max-width: 896px) and (min-width: 375px) and (orientation: portrait) {
-  .v-timeline-item, .v-timeline:before {
-    display: none;
-  }
-}
+
 </style>
 
 <script>

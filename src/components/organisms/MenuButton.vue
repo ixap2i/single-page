@@ -3,6 +3,7 @@
   <!-- fab placed in the center of the content with a list on each side -->
   <ion-fab vertical="center" horizontal="center" slot="fixed">
     <ion-fab-button>
+      menu
     </ion-fab-button>
     <ion-fab-list side="top">
       <ion-fab-button>
