@@ -56,6 +56,12 @@ module.exports = {
         options: vueLoaderConfig
       },
       {
+				test: /\.ts$/,
+				use: {
+					loader: 'babel-loader',
+				},
+			},
+      {
         test: /\.(css|scss|sass)/,
         use: [
           {

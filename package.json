@@ -8,7 +8,8 @@
     "dev": "webpack-dev-server --mode development --inline --hot --history-api-fallback --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js --mode production"
+    "build": "node build/build.js --mode production",
+    "test": "jest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -29,8 +30,10 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@ionic/vue": "^5.9.1",
+    "@types/jest": "^27.0.2",
     "@vue/compiler-sfc": "^3.2.22",
     "autoprefixer": "^7.1.2",
+    "axios": "^0.24.0",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
