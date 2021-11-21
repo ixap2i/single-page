@@ -8,12 +8,13 @@ const cors = require('cors')
 
 const passport = require('passport')
 const OAuthStrategy = require('passport-oauth').OAuthStrategy
+const OAuth2Strategy = require('passport-oauth').OAuth2Strategy
 
 var app = express()
 
 app.use(bodyParser.json())
 app.use(cors())
-app.set('port', process.env.PORT || 1234)
+app.set('port', process.env.PORT || 1235)
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
@@ -27,21 +28,58 @@ passport.use('provider', new OAuthStrategy({
     userAuthorizationURL: env.AUTH_URL,
     consumerKey: env.CONSUMER_KEY,
     consumerSecret: env.CONSUMER_SECRET,
-    callbackURL: 'http://0.0.0.0:1234/auth/provider/callback'
+    callbackURL: 'http://0.0.0.0:1235/auth/provider/callback'
   },
-  function(token :String, tokenSecret :String, profile :any, done :any) {
-    console.log('profile', profile)
-    done(null, profile)
+  function(token: String, tokenSecret :String, profile :any, done :any) {
+    if(token) {
+      console.log(token)
+      console.log(tokenSecret)
+      console.log(profile)
+    }
   }
 ))
 
-app.get('/auth/provider', passport.authenticate('provider'))
-app.get('/auth/provider/callback', function(req: any, res: { send: (arg0: { message: string }) => void }) {
-  res.send({
-    message: 'call back'
-  })
-})
+passport.use('provider2', new OAuth2Strategy({
+  authorizationURL: env.AUTH_URL,
+  tokenURL: env.ACS_TKN_URL,
+  clientID: env.OAUTH_TOKEN,
+  clientSecret: env.OAUTH_TOKEN_SECRET,
+  callbackURL: "http://0.0.0.0:1235/test2"
+},
+function(accessToken: string, refreshToken: string, profile: any, cb: any) {
 
+}
+));
+
+const getCircularReplacer = () => {
+  const seen = new WeakSet()
+  return (key: any, value: any) => {
+    if (typeof value === "object" && value !== null) {
+      if (seen.has(value)) {
+        return
+      }
+      seen.add(value)
+    }
+    return value
+  };
+};
+
+app.get('/auth/provider',
+  passport.authenticate('provider', { scope: 'auth/*' }, { session: true }, { failureRedirect: '/test' }),
+  function(req: any, res: any) {
+    res.json(res);
+  })
+app.get('/auth/provider/callback',
+
+  // passport.authenticate('provider2', { session: true }, { failureRedirect: '/test' }),
+  function(req: any, res: any) {
+    res.json( JSON.stringify(res, getCircularReplacer()));
+  })
+app.get('/auth/provider2',
+  passport.authenticate('provider2', { session: true }, { failureRedirect: '/test' }),
+  function(req: any, res: any) {
+    res.json(req);
+  })
 app.get('/test', function(req: any, res: { send: (arg0: { message: string }) => void }) {
   res.send({
     message: 'Hello world!'
@@ -61,4 +99,4 @@ app.get('/test3', function(req: any, res: { send: (arg0: { message: string }) =>
 })
 
 
-app.listen(process.env.PORT || 1234)
+app.listen(process.env.PORT || 1235)
