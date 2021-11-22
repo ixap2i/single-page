@@ -9,8 +9,8 @@ export const schema = {
   AUTH_URL: String,
   CONSUMER_KEY: String,
   CONSUMER_SECRET: String,
-  CLIENT_ID: String,
-  CLIENT_SECRET: String,
+  OAUTH_TOKEN: String,
+  OAUTH_TOKEN_SECRET: String,
 };
 
 export let env: Env;
