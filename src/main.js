@@ -20,6 +20,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import { IonicVue } from '@ionic/vue'
 import Vue, { createApp } from 'vue'
+import { createStore } from 'vuex'
 
 import App from './App.vue'
 import router from './router'
@@ -28,10 +29,20 @@ library.add(faUserSecret)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
+Vue.config.devtools = true
+
+export const store = createStore({
+  state () {
+    return {
+      count: 1
+    }
+  }
+})
 
 const app = createApp(App)
   .use(IonicVue)
   .use(router)
+  .use(store)
 
 router.isReady().then(() => {
   app.mount('#app')
