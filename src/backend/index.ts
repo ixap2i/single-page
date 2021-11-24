@@ -1,3 +1,5 @@
+import { doesNotMatch } from 'assert'
+import { encode } from 'punycode'
 import { loadEnv, env } from './env'
 loadEnv()
 
@@ -9,6 +11,14 @@ const cors = require('cors')
 const passport = require('passport')
 const OAuthStrategy = require('passport-oauth').OAuthStrategy
 const OAuth2Strategy = require('passport-oauth').OAuth2Strategy
+const HatenaStrategy = require('passport-hatena').Strategy
+
+const request = require('request')
+const options = {
+  method: 'GET',
+  json: true,
+  url: "https://bookmark.hatenaapis.com/rest/1/my",
+}
 
 type authJson = {
   oauth_token: string
@@ -24,7 +34,7 @@ app.use(session({
   secret: 'keyboard cat',
   resave: true,
   saveUninitialized: true,
-  cookie: { maxAge: 60000 },
+  cookie: { secure: true }
 }))
 
 app.use(passport.initialize())
@@ -36,33 +46,24 @@ passport.use('provider', new OAuthStrategy({
     userAuthorizationURL: env.AUTH_URL,
     consumerKey: env.CONSUMER_KEY,
     consumerSecret: env.CONSUMER_SECRET,
-    // callbackURL: env.AUTH_URL
-    callbackURL: 'http://0.0.0.0:1235/auth/provider/callback'
+    callbackURL: '/test'
   },
-  function(token: String, tokenSecret :String, profile :any, done :any) {
-    if(token) {
-      console.log(token)
-      console.log(tokenSecret)
-      console.log(profile)
-    }
+  function(token: any, tokenSecret: any, profile: any, cb: any) {
+    return cb(null, profile)
+
   }
 ))
 
-passport.use('provider2', new OAuth2Strategy({
-  authorizationURL: env.AUTH_URL,
-  tokenURL: env.ACS_TKN_URL,
-  clientID: env.OAUTH_TOKEN,
-  clientSecret: env.OAUTH_TOKEN_SECRET,
-  callbackURL: 'http://0.0.0.0:1235/test2'
+passport.use('hatena', new HatenaStrategy({
+  consumerKey: env.CONSUMER_KEY,
+  consumerSecret: env.CONSUMER_SECRET,
+  callbackURL: "/test"
 },
-function(token: String, tokenSecret :String, profile :any, done :any) {
-  if(token) {
-    console.log(token)
-    console.log(tokenSecret)
-    console.log(profile)
-  }
-}
-));
+function(token:any, tokenSecret:any, profile:any, done:any) {
+  process.nextTick(function () {
+    return done(null, profile);
+  });
+}))
 
 const getCircularReplacer = () => {
   const seen = new WeakSet()
@@ -78,30 +79,23 @@ const getCircularReplacer = () => {
 };
 
 app.get('/auth/provider',
-  passport.authenticate('provider', { scope: 'auth/provider2' }, { session: true }, { successRedirect: env.AUTH_URL }, { failureRedirect: '/test' }),
-  function(req: any, res: any) {
-    res.redirect('/auth/provider/callback')
-  })
-app.get('/auth/provider/callback',
-// TODO: redirect to authorize_path
-  // passport.authenticate('provider2', { session: true }, { failureRedirect: '/test' }),
+  passport.authenticate('hatena', { scope: ['read_public', 'write_public'] }),
+  function(req: any, res: any){
+    // The request will be redirected to Hatena for authentication, so this
+    // function will not be called.
+    res.redirect('/test')
 
-  function(req: any, res: any) {
-    console.log(session)
-    var json = JSON.stringify(res.socket.parser.socket._httpMessage.req.query, getCircularReplacer())
-    var castJson = JSON.parse(json) as authJson
-    res.send(castJson);
-  })
-app.get('/auth/provider2',
-  passport.authenticate('provider2', { session: true }, { failureRedirect: '/test' }),
+  });
 
-  function(req: any, res: any) {
-    res.json( JSON.stringify(res, getCircularReplacer()));
-  })
 app.get('/test', function(req: any, res: { send: (arg0: { message: string }) => void }) {
-  res.send({
-    message: 'Hello world!'
-  })
+  request(options, function(error :any, response :any, body :any) {
+    console.log(error);
+    console.log(response);
+    console.log(body);
+  });
+  // res.send({
+  //   message: 'loginned'
+  // })
 })
 
 app.get('/test2', function(req: any, res: { send: (arg0: { message: string }) => void }) {

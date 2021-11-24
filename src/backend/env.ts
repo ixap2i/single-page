@@ -8,9 +8,7 @@ export const schema = {
   ACS_TKN_URL: String,
   AUTH_URL: String,
   CONSUMER_KEY: String,
-  CONSUMER_SECRET: String,
-  OAUTH_TOKEN: String,
-  OAUTH_TOKEN_SECRET: String,
+  CONSUMER_SECRET: String
 };
 
 export let env: Env;
