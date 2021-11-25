@@ -1,5 +1,5 @@
 <template>
-  <ion-card :style="{ 'background-image': 'url(../../static/green.jpg)', 'background-size':'contain' }">
+  <ion-card :style="{ 'background-image': 'url(../../static/'+imageName+')', 'width':'400px', 'height':'267px' }">
     <ion-card-header>
       <ion-card-subtitle>
         <template v-if="link">
@@ -11,14 +11,11 @@
           {{ term }}
         </template>
       </ion-card-subtitle>
-      <ion-card-title :projectName='setProjectName'>{{projectName}}</ion-card-title>
-      <ion-avatar>
-        <img :src="img">
-      </ion-avatar>
+      <ion-card-title :skillName='setSkillName'>{{skillName}}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      {{projectDescription}}
+      {{skillDesc}}
     </ion-card-content>
   </ion-card>
 </template>
@@ -33,11 +30,12 @@ export default defineComponent({
     return { warning }
   },
   props: {
-    projectName: String,
-    projectDescription: String,
+    skillName: String,
+    skillDesc: String,
     term: String,
     img: String,
-    link: Boolean
+    link: Boolean,
+    imageName: String
   },
   data: () => {
     return {

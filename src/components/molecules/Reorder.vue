@@ -1,71 +1,21 @@
 <template>
   <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
-  <ion-reorder-group :disabled="false">
-    <!-- Default reorder icon, end aligned items -->
-    <ion-item>
-      <ion-label>
-        Item 1
-      </ion-label>
-      <ion-reorder slot="end"></ion-reorder>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>
-        Item 2
-      </ion-label>
-      <ion-reorder slot="end"></ion-reorder>
-    </ion-item>
-
+  <ion-reorder-group  @ionItemReorder="doReorder" :disabled="false">
     <!-- Default reorder icon, start aligned items -->
-    <ion-item>
+    <!-- <ion-item>
       <ion-reorder slot="start"></ion-reorder>
-      <ion-label>
-        Item 3
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-reorder slot="start"></ion-reorder>
-      <ion-label>
-        Item 4
-      </ion-label>
-    </ion-item>
-
-    <!-- Custom reorder icon end items -->
-    <ion-item>
-      <ion-label>
-        Item 5
-      </ion-label>
-      <ion-reorder slot="end">
-        <ion-icon name="pizza"></ion-icon>
-      </ion-reorder>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>
-        Item 6
-      </ion-label>
-      <ion-reorder slot="end">
-        <ion-icon name="pizza"></ion-icon>
-      </ion-reorder>
-    </ion-item>
+      <SkillFilm />
+    </ion-item> -->
 
     <!-- Items wrapped in a reorder, entire item can be dragged -->
-    <ion-reorder>
+    <ion-reorder v-for="item in items" :key="item" slot="start">
       <ion-item>
         <ion-label>
-          Item 7
+          {{ item }}
         </ion-label>
       </ion-item>
     </ion-reorder>
 
-    <ion-reorder>
-      <ion-item>
-        <ion-label>
-          Item 8
-        </ion-label>
-      </ion-item>
-    </ion-reorder>
   </ion-reorder-group>
 </template>
 
@@ -77,19 +27,59 @@ import {
   IonReorder,
   IonReorderGroup
 } from '@ionic/vue'
-import { pizza } from 'ionicons/icons'
-import { defineComponent } from 'vue'
-
+import { defineComponent, ref } from 'vue'
+import SkillFilm from '../atoms/SkillFilm.vue'
 export default defineComponent({
   components: {
     IonIcon,
     IonItem,
     IonLabel,
     IonReorder,
-    IonReorderGroup
+    IonReorderGroup,
+
+    SkillFilm
+  },
+  props: {
+  },
+  data: () => {
+    return {
+      items: [1, 2, 3, 4, 5, 6, 7, 8]
+
+    }
   },
   setup () {
-    return { pizza }
+    const items = ref([1, 2, 3, 4, 5, 6, 7, 8])
+    const doReorder = (event) => {
+      // The `from` and `to` properties contain the index of the item
+      // when the drag started and ended, respectively
+      items.value = event.detail.complete(items.value)
+
+      // // Finish the reorder and position the item in the DOM based on
+      // // where the gesture ended. This method can also be called directly
+      // // by the reorder group
+      event.detail.complete()
+
+      // const itemMove = this.items.splice(event.detail.from, 1)[0]
+      // this.items.splice(event.detail.to, 0, itemMove)
+      // event.detail.complete()
+    }
+    return { items, doReorder }
+  },
+  methods: {
+    ionItemReorder: function (event) {
+      // The `from` and `to` properties contain the index of the item
+      // when the drag started and ended, respectively
+      console.log('Dragged from index', event.detail.from, 'to', event.detail.to)
+
+      // // Finish the reorder and position the item in the DOM based on
+      // // where the gesture ended. This method can also be called directly
+      // // by the reorder group
+      event.detail.complete()
+
+      // const itemMove = this.items.splice(event.detail.from, 1)[0]
+      // this.items.splice(event.detail.to, 0, itemMove)
+      // event.detail.complete()
+    }
   }
 })
 </script>

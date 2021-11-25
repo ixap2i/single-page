@@ -25,12 +25,10 @@
 
 <script>
 import Card from '../atoms/Card.vue'
-import Reorder from '../molecules/Reorder.vue'
 
 export default {
   components: {
-    Card,
-    Reorder
+    Card
   },
   data () {
     return {
