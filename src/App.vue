@@ -1,7 +1,7 @@
 <template>
   <div>
     <ion-avatar>
-      <img src="./assets/icon.jpeg">
+      <img src="../static/icon.jpeg">
     </ion-avatar>
     <ion-text color="secondary">
       <h1>I'm a web developer.</h1>

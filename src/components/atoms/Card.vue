@@ -1,5 +1,5 @@
 <template>
-  <ion-card :style="{ 'background-image': 'url(../../static/green.jpg)', 'background-size':'contain' }">
+  <ion-card>
     <ion-card-header>
       <ion-card-subtitle>
         <template v-if="link">
