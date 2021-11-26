@@ -1,8 +1,6 @@
 <template>
   <div>
-    <i class="fa fa-suitcase" aria-hidden="true"></i>
-    Job
-
+    <Title :title="'Job'" :icon="'fa fa-suitcase'" />
     <Card
       projectName='FoodScore'
       projectDescription='食品の原材料名をOCRで読み取り、健康度順にデータ化。美味しさの指標でソートすることができるHealthyFoodリスト。■ バッチ処理（大量のデータ処理）、経営指標に関するダッシュボード作成などバックエンド全般を担当。 ■ Rails6, JavaScript, PostgreSQL, AWS'
@@ -24,11 +22,12 @@
 </style>
 
 <script>
+import Title from '../atoms/Title.vue'
 import Card from '../atoms/Card.vue'
 
 export default {
   components: {
-    Card
+    Title, Card
   },
   data () {
     return {

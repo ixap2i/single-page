@@ -12,7 +12,7 @@
         </template>
       </ion-card-subtitle>
       <ion-card-title :projectName='setProjectName'>{{projectName}}</ion-card-title>
-      <ion-avatar>
+      <ion-avatar v-if="img">
         <img :src="img">
       </ion-avatar>
     </ion-card-header>

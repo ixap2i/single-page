@@ -1,7 +1,6 @@
 <template>
   <div>
-    <i class="fas fa-motorcycle"></i>
-    Portfolio
+    <Title :title="'Portfolio'" :icon="'fa fa-motorcycle'" />
     <card
       v-for="item in items"
       :key="item.title"
@@ -19,9 +18,10 @@
 
 <script>
 import Card from '../atoms/Card.vue'
+import Title from '../atoms/Title.vue'
 export default {
   components: {
-    Card
+    Card, Title
   },
   data () {
     return {

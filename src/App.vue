@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :style="{ 'background-image': 'url(../../static/texture.jpg)', 'object-fit': 'cover' }">
     <ion-avatar>
       <img src="../static/icon.jpeg">
     </ion-avatar>
@@ -7,36 +7,31 @@
       <h1>I'm a web developer.</h1>
     </ion-text>
 
-    <v-layout
-      align-center
-      justify-space-around
-      wrap>
-      <router-view/>
-      <h1>2021 Akane Yamashita</h1>
-      <MenuButton/>
-    </v-layout>
+    <h1>2021 Akane Yamashita</h1>
+    <container>
+    </container>
+    <menu-button></menu-button>
   </div>
 </template>
 
 <script>
 import {
-  IonAvatar, IonChip, IonText,
+  IonAvatar, IonChip,
   IonCol, IonGrid, IonRow
 } from '@ionic/vue'
-import MenuButton from '../src/components/organisms/MenuButton.vue'
-
+import MenuButton from './components/molecules/MenuButton.vue'
+import Container from './components/molecules/Container.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
   components: {
     IonAvatar,
     IonChip,
-    IonText,
     IonCol,
     IonGrid,
     IonRow,
-
-    MenuButton
+    MenuButton,
+    Container
   },
   created: function () {
   }
