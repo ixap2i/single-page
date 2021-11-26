@@ -1,5 +1,5 @@
 <template>
-  <ion-card :style="{ 'background-image': 'url(../../static/'+imageName+')', 'width':'400px', 'height':'267px' }">
+  <ion-card :style="{ 'background-image': 'url(../../static/'+imageName+')', 'width': filmWidth, 'height': filmHeight }">
     <ion-card-header>
       <ion-card-subtitle>
         <template v-if="link">
@@ -35,10 +35,26 @@ export default defineComponent({
     term: String,
     img: String,
     link: Boolean,
-    imageName: String
+    imageName: String,
+    filmWidth: String,
+    filmHeight: String
   },
   data: () => {
     return {
+      filmWidth: 0,
+      filmHeight: 0
+    }
+  },
+  created: function () {
+    if (window.innerWidth < 500) {
+      this.filmWidth = '320px'
+    } else {
+      this.filmWidth = '400px'
+    }
+    if (window.innerHeight < 800) {
+      this.filmHeight = '267px'
+    } else {
+      this.filmHeight = '267px'
     }
   }
 })

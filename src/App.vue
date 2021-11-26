@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ 'background-image': 'url(../../static/texture.jpg)', 'object-fit': 'cover' }">
+  <div>
     <ion-avatar>
       <img src="../static/icon.jpeg">
     </ion-avatar>
