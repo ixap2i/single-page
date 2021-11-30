@@ -1,32 +1,32 @@
 <template>
   <ion-content>
-  <!-- fab placed in the center of the content with a list on each side -->
-  <ion-fab vertical="center" horizontal="center" slot="fixed">
-    <ion-fab-button>
-      menu
-    </ion-fab-button>
-    <ion-fab-list side="top">
+    <!-- fab placed in the center of the content with a list on each side -->
+    <ion-fab vertical="center" horizontal="center" slot="fixed">
       <ion-fab-button>
-        <span @click="pushLink('skill')">skill</span>
+        menu
       </ion-fab-button>
-    </ion-fab-list>
-    <ion-fab-list side="bottom">
-      <ion-fab-button>
-        <span @click="pushLink('portfolio')">portfolio</span>
-      </ion-fab-button>
-    </ion-fab-list>
-    <ion-fab-list side="start">
-      <ion-fab-button>
-        <span @click="pushLink('job')">job</span>
-      </ion-fab-button>
-    </ion-fab-list>
-    <ion-fab-list side="end">
-      <ion-fab-button>
-        <span href='/' @click="pushLink('/')">top</span>
-      </ion-fab-button>
-    </ion-fab-list>
-  </ion-fab>
-</ion-content>
+      <ion-fab-list side="top">
+        <ion-fab-button>
+          <span @click="pushLink('skill')">skill</span>
+        </ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="bottom">
+        <ion-fab-button>
+          <span @click="pushLink('portfolio')">portfolio</span>
+        </ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="start">
+        <ion-fab-button>
+          <span @click="pushLink('job')">job</span>
+        </ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="end">
+        <ion-fab-button>
+          <span href='/' @click="pushLink('/')">top</span>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+  </ion-content>
 </template>
 
 <script>

@@ -3,12 +3,12 @@
     <ion-row>
     </ion-row>
     <ion-row>
-      <ion-col>
+      <ion-col :style="{'display': containerWidth !== '0' ? 'block' : 'none'}">
       </ion-col>
       <ion-col>
         <router-view/>
       </ion-col>
-      <ion-col>
+      <ion-col :style="{'display': containerWidth !== '0' ? 'block' : 'none'}">
       </ion-col>
     </ion-row>
     <ion-row :style="{'height': containerHeight+'px'}">
@@ -24,7 +24,8 @@ export default defineComponent({
   },
   data: () => {
     return {
-      containerHeight: 0
+      containerHeight: 0,
+      containerWidth: 0
     }
   },
   created: function () {
@@ -32,6 +33,10 @@ export default defineComponent({
       this.containerHeight = '0'
     } else {
       this.containerHeight = '200'
+    }
+
+    if (window.innerWidth < 500) {
+      this.containerWidth = '0'
     }
   }
 })

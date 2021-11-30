@@ -1,16 +1,30 @@
 <template>
   <div>
     <ion-avatar>
-      <img src="../static/icon.jpeg">
+      <img src="../static/icon.jpeg" alt="site author">
     </ion-avatar>
-    <ion-text color="secondary">
+    <!-- <ion-text color="secondary">
       <h1>I'm a web developer.</h1>
     </ion-text>
 
-    <h1>2021 Akane Yamashita</h1>
-    <container>
+    <h1>2021 Akane Yamashita</h1> -->
+    Thanks to:
+    <router-link to="https://www.pexels.com/ja-jp/@ekrulila?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
+    Ekrulila
+    </router-link>/
+    <router-link to="https://www.pexels.com/ja-jp/@pnw-prod?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
+    PNW Production
+    </router-link>/
+    <router-link to="https://www.pexels.com/ja-jp/@nord6?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
+    Tina Nord
+    </router-link>/
+    <router-link to="https://www.pexels.com/ja-jp/@kpaukshtite?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
+    Kristina Paukshtite
+    </router-link>/
+    <container style="height: 648px; overflow: scroll;">
     </container>
     <menu-button></menu-button>
+    <div style='padding-bottom: 200px;'></div>
   </div>
 </template>
 
@@ -43,10 +57,7 @@ export default defineComponent({
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  background: #fff;
   color: #2c3e50;
-  margin-top: 60px;
 }
 h1 {
   font-size: 13px;
@@ -60,4 +71,5 @@ h1 {
 i {
   margin-right: 10px;
 }
+a { color: red; }
 </style>
