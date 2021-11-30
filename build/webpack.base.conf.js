@@ -28,13 +28,6 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.join(__dirname, 'public', 'static'),
   },
-  // output: {
-  //   path: config.build.assetsRoot,
-  //   filename: '[name].js',
-  //   publicPath: process.env.NODE_ENV === 'production'
-  //     ? config.build.assetsPublicPath
-  //     : config.dev.assetsPublicPath
-  // },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     publicPath: '/',
@@ -62,14 +55,18 @@ module.exports = {
 				},
 			},
       {
-        test: /\.(css|scss|sass)/,
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.s[ac]ss$/i,
         use: [
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader',
-          },
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
         ],
       },
       {
@@ -100,28 +97,6 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
-      {
-        test: /\.s(c|a)ss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            // Requires sass-loader@^7.0.0
-            options: {
-              implementation: require('sass'),
-              indentedSyntax: true // optional
-            },
-            // Requires >= sass-loader@^8.0.0
-            options: {
-              implementation: require('sass'),
-              sassOptions: {
-                indentedSyntax: true // optional
-              },
-            },
-          },
-        ],
       }
     ]
   },
