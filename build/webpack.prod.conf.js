@@ -64,10 +64,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     // keep module.id stable when vendor modules does not change
     new webpack.HashedModuleIdsPlugin(),
     // split vendor js into its own file
-    new webpack.optimize.SplitChunks({
-      name: 'vendor',
-      chunks: 'initial'
-    }),
+    // new webpack.optimize.SplitChunks({
+    //   name: 'vendor',
+    //   chunks: 'initial'
+    // }),
     // new webpack.optimize.CommonsChunkPlugin({
     //   name: 'vendor',
     //   minChunks (module) {
