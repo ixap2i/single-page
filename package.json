@@ -5,8 +5,7 @@
   "author": "aknk",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --mode development --inline --hot --history-api-fallback --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "start": "npm run build",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js --mode production",
     "test": "jest"
