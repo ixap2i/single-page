@@ -25,7 +25,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 const apiService = {
-  get (url, params) {
+  async get (url, params) {
     axios.get(url, params)
   },
 
