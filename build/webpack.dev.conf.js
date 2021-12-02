@@ -57,6 +57,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   //   //   { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
   //   // ],
   // },
+
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -72,7 +73,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-  ]
+  ],
 })
 
 module.exports = new Promise((resolve, reject) => {

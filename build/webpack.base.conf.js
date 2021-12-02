@@ -2,7 +2,6 @@
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
-const vueLoaderConfig = require('./vue-loader.conf')
 const { VueLoaderPlugin } = require('vue-loader')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -44,16 +43,38 @@ module.exports = {
     rules: [
       ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
-        test: /\.vue(\.js)?$/,
-        loader: 'vue-loader',
-        options: vueLoaderConfig
+        test: /\.vue?$/,
+        use: [
+          {
+            loader: 'vue-loader',
+            query: {
+              presets: ['@babel/preset-env'],
+              plugins: ['transform-vue-jsx']
+            }
+          }
+        ],
+      },
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            query: {
+              presets: ['@babel/preset-env'],
+              plugins: ['transform-vue-jsx']
+            }
+          }
+        ],
+
       },
       {
 				test: /\.ts$/,
-				use: {
-					loader: 'babel-loader',
-				},
+        exclude: /node_modules/,
+				use: [
+        { loader: 'babel-loader' },
+        ]
 			},
+
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],

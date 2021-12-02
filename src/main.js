@@ -1,3 +1,6 @@
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css'
 
@@ -18,7 +21,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import { IonicVue } from '@ionic/vue'
 import Vue, { createApp } from 'vue'
 import { createStore } from 'vuex'
 
@@ -40,7 +42,6 @@ export const store = createStore({
 })
 
 const app = createApp(App)
-  .use(IonicVue)
   .use(router)
   .use(store)
 
