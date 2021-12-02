@@ -36,7 +36,7 @@ import {
 import MenuButton from './components/molecules/MenuButton.vue'
 import Container from './components/molecules/Container.vue'
 import { defineComponent } from 'vue'
-
+import apiService from './services/apiService.ts'
 export default defineComponent({
   components: {
     IonAvatar,
@@ -47,7 +47,10 @@ export default defineComponent({
     MenuButton,
     Container
   },
-  created: function () {
+  created: async function () {
+    apiService.get('http://localhost:1235/oneEntry', {}).then(res => {
+      console.log(res.request.responseText)
+    })
   }
 })
 </script>

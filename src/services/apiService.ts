@@ -26,21 +26,15 @@ axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 const apiService = {
   async get (url, params) {
-    axios.get(url, params)
+    return await axios.get(url, params)
   },
 
-  post (url, params) {
-    const options = {
-      method: 'POST',
-      data: params,
-      url,
-    }
-    axios(options)
-    axios.post(url, params)
+  async post (url, params) {
+    return await axios.post(url, params)
   },
 
-  delete (url) {
-    axios.delete(url)
+  async delete (url, params) {
+    return await axios.delete(url, params)
   }
 }
 export default apiService
