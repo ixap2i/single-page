@@ -105,7 +105,8 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-  ]
+  ],
+  mode: 'production'
 })
 
 if (config.build.productionGzip) {

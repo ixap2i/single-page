@@ -5,8 +5,7 @@
   "author": "aknk",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --mode development --inline --hot --history-api-fallback --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "start": "npm run build",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js --mode production",
     "test": "jest"
@@ -47,6 +46,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "chai": "^4.3.4",
     "chalk": "^2.0.1",
+    "compression-webpack-plugin": "^9.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
     "deepmerge": "^4.2.2",
