@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: '/single-page',
   devServer: {
     port: 9000,
     disableHostCheck: true,
