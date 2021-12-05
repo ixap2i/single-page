@@ -46,6 +46,7 @@ module.exports = {
 
     cssSourceMap: true,
     vueRouterMode: 'history',
+    base: process.env.BASE_URL,
     index: path.resolve(__dirname, '../docs/index.html'),
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: 'static',
@@ -81,7 +82,8 @@ module.exports = {
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report,
-    vueRouterMode: 'history'
+    vueRouterMode: 'history',
+    base: process.env.BASE_URL,
   },
 
   chainWebpack: config => {
