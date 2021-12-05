@@ -1,5 +1,5 @@
 <template>
-  <ion-card :style="{ 'background-image': 'url(../../static/'+imageName+')', 'width': filmWidth, 'height': filmHeight }">
+  <ion-card :style="{ 'background-image': 'url(../static/'+imageName+')', 'width': filmWidth, 'height': filmHeight }">
     <ion-card-header>
       <ion-card-subtitle>
         <template v-if="link">
@@ -56,6 +56,7 @@ export default defineComponent({
     } else {
       this.filmHeight = '267px'
     }
+    console.log()
   }
 })
 </script>

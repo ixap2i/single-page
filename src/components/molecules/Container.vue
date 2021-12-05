@@ -19,9 +19,6 @@
 <script>
 import { defineComponent } from 'vue'
 export default defineComponent({
-  props: {
-    containerHeight: String
-  },
   data: () => {
     return {
       containerHeight: 0,

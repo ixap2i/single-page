@@ -1,7 +1,7 @@
 <template>
   <div>
     <ion-avatar>
-      <img src="../static/icon.jpeg" alt="site author">
+      <img src="../static/img/icon.jpeg" alt="site author">
     </ion-avatar>
     <!-- <ion-text color="secondary">
       <h1>I'm a web developer.</h1>
@@ -48,9 +48,9 @@ export default defineComponent({
     Container
   },
   created: async function () {
-    apiService.get('http://localhost:1235/oneEntry', {}).then(res => {
-      console.log(res.request.responseText)
-    })
+    // apiService.get('http://localhost:1235/oneEntry', {}).then(res => {
+    //   console.log(res.request.responseText)
+    // })
   }
 })
 </script>
