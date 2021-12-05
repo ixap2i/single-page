@@ -23,8 +23,8 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
     path: config.build.assetsRoot,
-    filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+    filename: utils.assetsPath('js/[name].[hash].js'),
+    chunkFilename: utils.assetsPath('js/[id].[hash].js')
   },
   plugins: [
     // extract css into its own file
@@ -47,7 +47,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: config.build.index,
+      filename: 'index.html',
       template: 'index.html',
       inject: true,
       minify: {
@@ -64,10 +64,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     // keep module.id stable when vendor modules does not change
     new webpack.HashedModuleIdsPlugin(),
     // split vendor js into its own file
-    new webpack.optimize.SplitChunks({
-      name: 'vendor',
-      chunks: 'initial'
-    }),
+    // new webpack.optimize.SplitChunks({
+    //   name: 'vendor',
+    //   chunks: 'initial'
+    // }),
     // new webpack.optimize.CommonsChunkPlugin({
     //   name: 'vendor',
     //   minChunks (module) {
