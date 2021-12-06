@@ -1,5 +1,3 @@
-import { doesNotMatch } from 'assert'
-import { encode } from 'punycode'
 import { loadEnv, env } from './env'
 loadEnv()
 
@@ -14,16 +12,8 @@ const OAuth2Strategy = require('passport-oauth').OAuth2Strategy
 const HatenaStrategy = require('passport-hatena').Strategy
 
 const request = require('request')
-const options = {
-  method: 'GET',
-  json: true,
-  url: "https://bookmark.hatenaapis.com/rest/1/my",
-}
+const requestOptionForEmb = require('./request')
 
-type authJson = {
-  oauth_token: string
-  oauth_verifier: string
-}
 var app = express()
 app.use(bodyParser.json())
 app.use(cors())
@@ -87,28 +77,11 @@ app.get('/auth/provider',
 
   });
 
-app.get('/test', function(req: any, res: { send: (arg0: { message: string }) => void }) {
-  request(options, function(error :any, response :any, body :any) {
-    console.log(error);
-    console.log(response);
-    console.log(body);
+app.get('/getEmbedObj', function(req: any, res: { send: (arg0: { message: string }) => void }) {
+  request(requestOptionForEmb.options, function(error :any, response :any, body :any) {
+    // TODO: error handling
+    res.send(body)
   });
-  // res.send({
-  //   message: 'loginned'
-  // })
 })
-
-app.get('/test2', function(req: any, res: { send: (arg0: { message: string }) => void }) {
-  res.send({
-    message: JSON.stringify(session, getCircularReplacer())
-  })
-})
-
-app.get('/test3', function(req: any, res: { send: (arg0: { message: string }) => void }) {
-  res.send({
-    message: 'failed'
-  })
-})
-
 
 app.listen(process.env.PORT || 1235)
