@@ -6,7 +6,7 @@ import { createApp } from 'vue/dist/vue.runtime.esm-bundler'
 import App from './App.vue'
 import { IonicVue } from '@ionic/vue'
 import router from './router'
-import { store } from './store/store'
+import { store } from './store/store.js'
 
 export const app = createApp(App)
 app.config.devtools = true
