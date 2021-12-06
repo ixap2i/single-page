@@ -12,7 +12,7 @@ const OAuth2Strategy = require('passport-oauth').OAuth2Strategy
 const HatenaStrategy = require('passport-hatena').Strategy
 
 const request = require('request')
-const requestOptionForEmb = require('./request')
+const requestOptionForEmb = require('./requestOption')
 
 var app = express()
 app.use(bodyParser.json())

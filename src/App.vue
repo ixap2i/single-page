@@ -48,9 +48,9 @@ export default defineComponent({
     Container
   },
   created: async function () {
-    // apiService.get('http://localhost:1235/oneEntry', {}).then(res => {
-    //   console.log(res.request.responseText)
-    // })
+    apiService.get('http://localhost:1235/getEmbedObj', {}).then(res => {
+      console.log(res.request.responseText)
+    })
   }
 })
 </script>
