@@ -4,7 +4,7 @@ This is just a portfolio of ixap2i.
 
 # deployed here
 
-https://ixap2i.github.io/single-page/
+https://magenta-quilled-seeder.glitch.me/
 
 ## Build Setup
 
