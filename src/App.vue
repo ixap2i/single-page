@@ -37,7 +37,6 @@ import MenuButton from './components/molecules/MenuButton.vue'
 import Container from './components/molecules/Container.vue'
 import { defineComponent } from 'vue'
 import apiService from './services/apiService.ts'
-import * as store from './store/store.js'
 export default defineComponent({
   components: {
     IonAvatar,
@@ -50,8 +49,7 @@ export default defineComponent({
   },
   created: async function () {
     apiService.get('http://localhost:1235/getEmbedObj', {}).then(res => {
-      console.log(res.request.responseText)
-      this.$store.commit('embedObj/REQUESTED', true)
+      this.$store.commit('embedObj/REQUESTED', res.data)
     })
   }
 })
