@@ -3,24 +3,23 @@
     <ion-avatar>
       <img src="../static/img/icon.jpeg" alt="site author">
     </ion-avatar>
-    <!-- <ion-text color="secondary">
-      <h1>I'm a web developer.</h1>
+    <ion-text color="secondary">
+      <h1>2021 Akane Yamashita</h1>
     </ion-text>
 
-    <h1>2021 Akane Yamashita</h1> -->
+    <h2>I'm a web developer.</h2>
     Thanks to:
-    <router-link to="https://www.pexels.com/ja-jp/@ekrulila?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
-    Ekrulila
-    </router-link>/
-    <router-link to="https://www.pexels.com/ja-jp/@pnw-prod?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
+    <a href='https://www.pexels.com/ja-jp/@ekrulila?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels' target="_blank">
+    Ekrulila</a>
+    <a href='https://www.pexels.com/ja-jp/@pnw-prod?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels'>
     PNW Production
-    </router-link>/
-    <router-link to="https://www.pexels.com/ja-jp/@nord6?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
+    </a>/
+    <a href='https://www.pexels.com/ja-jp/@nord6?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels'>
     Tina Nord
-    </router-link>/
-    <router-link to="https://www.pexels.com/ja-jp/@kpaukshtite?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">
+    </a>/
+    <a href='https://www.pexels.com/ja-jp/@kpaukshtite?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels'>
     Kristina Paukshtite
-    </router-link>/
+    </a>/
     <container style="height: 648px; overflow: scroll;">
     </container>
     <menu-button></menu-button>
@@ -58,6 +57,12 @@ export default defineComponent({
 </script>
 
 <style>
+body  {
+  background: url("../static/img/texture.jpg");
+  background-color: rgba(255,255,255,0.2);
+  background-blend-mode: overlay;
+  object-fit: cover;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

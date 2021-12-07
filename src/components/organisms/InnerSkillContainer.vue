@@ -47,7 +47,7 @@ export default {
         },
         {
           skillName: 'Java, Kotlin',
-          desc: '読み書き可能',
+          desc: '',
           subtitle: '1年程度',
           imageName: 'blue.jpg'
         }
