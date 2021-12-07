@@ -4,7 +4,7 @@ This is just a portfolio of ixap2i.
 
 # deployed here
 
-https://magenta-quilled-seeder.glitch.me/
+https://trapezoidal-kiwi-titanium.glitch.me/
 
 ## Build Setup
 
