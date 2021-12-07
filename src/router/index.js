@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const Portfolio = () => import('../components/pages/Portfolio.vue')
 const Job = () => import('../components/pages/Job.vue')
 const Skill = () => import('../components/pages/Skill.vue')
-const App = () => import('../App.vue')
+const Updates = () => import('../components/pages/Updates.vue')
 
 const routes = [
   { path: '/skill',
@@ -13,6 +13,9 @@ const routes = [
   },
   { path: '/portfolio',
     component: Portfolio
+  },
+  { path: '/',
+    component: Updates
   }
 ]
 console.log('base url' + process.env.BASE_URL)
