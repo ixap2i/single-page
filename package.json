@@ -86,6 +86,7 @@
     "vue-style-loader": "^3.0.1",
     "vue-svg-loader": "^0.12.0",
     "vuex": "^4.0.2",
+    "vuex-persistedstate": "^4.1.0",
     "webpack": "^4.26.0",
     "webpack-bundle-analyzer": ">=3.3.2",
     "webpack-cli": "^2.0.6",

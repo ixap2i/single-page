@@ -48,9 +48,11 @@ export default defineComponent({
     Container
   },
   created: async function () {
-    apiService.get('http://localhost:1235/getEmbedObj', {}).then(res => {
-      this.$store.commit('embedObj/REQUESTED', res.data)
-    })
+    if(!this.$store.state.embedObj.requested) {
+      apiService.get('http://localhost:1235/getEmbedObj', {}).then(res => {
+        this.$store.commit('embedObj/REQUESTED', res.data)
+      })
+    }
   }
 })
 </script>

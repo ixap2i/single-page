@@ -1,4 +1,5 @@
-import { createStore, mapMutations, mapActions } from 'vuex'
+import { createStore, mapMutations } from 'vuex'
+import createPersistedState from "vuex-persistedstate";
 import { REQUESTED } from './mutation-types.js'
 
 
@@ -18,6 +19,7 @@ export const store = createStore({
           state.embedObj = val
         }
       },
+      plugins: [createPersistedState()],
     }
   },
   methods: {
