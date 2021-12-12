@@ -15,5 +15,5 @@ yarn-error.log*
 
 package-lock.json
 
-src/backend/node_modules/
-src/backend/.env
+/src/server/node_modules/*
+/src/server/.env
