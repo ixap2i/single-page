@@ -5,7 +5,7 @@ module.exports = {
     publicPath: '/',
     historyApiFallback: true
   },
-  outputDir: 'dist',
+  outputDir: 'docs',
   filenameHashing: false,
   productionSourceMap: false,
 }

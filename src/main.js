@@ -2,7 +2,7 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 
-import { createApp } from 'vue/docs/vue.runtime.esm-bundler'
+import { createApp } from 'vue'
 import App from './App.vue'
 import { IonicVue } from '@ionic/vue'
 import router from './router'
