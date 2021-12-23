@@ -1,7 +1,7 @@
 <template>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>
+  <IonCard>
+    <IonCardHeader>
+      <IonCardSubtitle>
         <template v-if="link">
           <a :href="term" target="_blank">
             {{ term }}
@@ -10,25 +10,25 @@
         <template v-else>
           {{ term }}
         </template>
-      </ion-card-subtitle>
-      <ion-card-title :projectName='setProjectName'>{{projectName}}</ion-card-title>
-      <ion-avatar v-if="img">
+      </IonCardSubtitle>
+      <IonCardTitle :projectName='projectName'>{{projectName}}</IonCardTitle>
+      <IonAvatar v-if="img">
         <img :src="img">
-      </ion-avatar>
-    </ion-card-header>
+      </IonAvatar>
+    </IonCardHeader>
 
-    <ion-card-content>
+    <IonCardContent>
       {{projectDescription}}
-    </ion-card-content>
-  </ion-card>
+    </IonCardContent>
+  </IonCard>
 </template>
 
 <script>
-import { IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel } from '@ionic/vue'
+import { IonAvatar, IonCard, IonCardHeader, IonCardContent, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel } from '@ionic/vue'
 import { warning } from 'ionicons/icons'
 import { defineComponent } from 'vue'
 export default defineComponent({
-  components: { IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel },
+  components: { IonAvatar, IonCard, IonCardHeader, IonCardContent, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel },
   setup () {
     return { warning }
   },

@@ -11,7 +11,6 @@ import { store } from './store/store.js'
 export const app = createApp(App)
 app.config.devtools = true
 
-app.config.compilerOptions.isCustomElement = tag => tag.startsWith('ion-')
 app.use(IonicVue)
 app.use(router)
 app.use(store)

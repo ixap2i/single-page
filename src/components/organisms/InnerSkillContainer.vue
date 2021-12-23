@@ -1,10 +1,10 @@
 <template>
   <div>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-        </ion-col>
-        <ion-col>
+    <IonGrid>
+      <IonRow>
+        <IonCol>
+        </IonCol>
+        <IonCol>
           <Title :title="'skill'" :icon="'fa fa-address-card'" />
           <template v-for="item in items" :key="item">
             <SkillFilm
@@ -13,21 +13,26 @@
               :term='item.term'
               :imageName='item.imageName' />
           </template>
-        </ion-col>
-        <ion-col>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+        </IonCol>
+        <IonCol>
+        </IonCol>
+      </IonRow>
+    </IonGrid>
   </div>
 </template>
 
 <script>
 import Title from '../atoms/Title.vue'
 import SkillFilm from '../atoms/SkillFilm.vue'
+import { IonGrid, IonCol, IonRow } from '@ionic/vue'
 
 export default {
   components: {
-    SkillFilm, Title
+    SkillFilm,
+    Title,
+    IonGrid,
+    IonCol,
+    IonRow
   },
   data () {
     return {

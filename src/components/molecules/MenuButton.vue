@@ -1,91 +1,47 @@
 <template>
-  <ion-content>
+  <IonContent>
     <!-- fab placed in the center of the content with a list on each side -->
-    <ion-fab vertical="center" horizontal="center" slot="fixed">
-      <ion-fab-button>
+    <IonFab vertical="center" horizontal="center" slot="fixed">
+      <IonFabButton>
         menu
-      </ion-fab-button>
-      <ion-fab-list side="top">
-        <ion-fab-button>
+      </IonFabButton>
+      <IonFabList side="top">
+        <IonFabButton>
           <span @click="pushLink('skill')">skill</span>
-        </ion-fab-button>
-      </ion-fab-list>
-      <ion-fab-list side="bottom">
-        <ion-fab-button>
+        </IonFabButton>
+      </IonFabList>
+      <IonFabList side="bottom">
+        <IonFabButton>
           <span @click="pushLink('portfolio')">portfolio</span>
-        </ion-fab-button>
-      </ion-fab-list>
-      <ion-fab-list side="start">
-        <ion-fab-button>
+        </IonFabButton>
+      </IonFabList>
+      <IonFabList side="start">
+        <IonFabButton>
           <span @click="pushLink('job')">job</span>
-        </ion-fab-button>
-      </ion-fab-list>
-      <ion-fab-list side="end">
-        <ion-fab-button>
+        </IonFabButton>
+      </IonFabList>
+      <IonFabList side="end">
+        <IonFabButton>
           <span href='/' @click="pushLink('/')">top</span>
-        </ion-fab-button>
-      </ion-fab-list>
-    </ion-fab>
-  </ion-content>
+        </IonFabButton>
+      </IonFabList>
+    </IonFab>
+  </IonContent>
 </template>
 
 <script>
 import {
-  IonAvatar, IonChip, IonText,
-  IonCol, IonGrid, IonRow,
   IonContent,
   IonFab,
   IonFabButton,
-  IonFabList,
-  IonFooter,
-  IonHeader,
-  IonIcon,
-  IonTitle,
-  IonToolbar
+  IonFabList
 } from '@ionic/vue'
-import {
-  add,
-  arrowBackCircle,
-  arrowForwardCircle,
-  logoFacebook,
-  logoInstagram,
-  logoTwitter,
-  logoVimeo,
-  person,
-  settings,
-  share
-} from 'ionicons/icons'
 export default {
   components: {
-    IonAvatar,
-    IonChip,
-    IonText,
-    IonCol,
-    IonGrid,
-    IonRow,
     IonContent,
     IonFab,
     IonFabButton,
-    IonFabList,
-    IonFooter,
-    IonHeader,
-    IonIcon,
-    IonTitle,
-    IonToolbar
-  },
-  setup () {
-    return {
-      add,
-      arrowBackCircle,
-      arrowForwardCircle,
-      logoFacebook,
-      logoInstagram,
-      logoTwitter,
-      logoVimeo,
-      person,
-      settings,
-      share
-    }
+    IonFabList
   },
   methods: {
     pushLink (path) {

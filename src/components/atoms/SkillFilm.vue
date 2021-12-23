@@ -1,7 +1,7 @@
 <template>
-  <ion-card :style="{ 'background-image': 'url(./img/'+imageName+')', 'width': filmWidth, 'height': filmHeight }">
-    <ion-card-header>
-      <ion-card-subtitle>
+  <IonCard :style="{ 'background-image': 'url(./img/'+imageName+')', 'width': filmWidth, 'height': filmHeight }">
+    <IonCardHeader>
+      <IonCardSubtitle>
         <template v-if="link">
           <a :href="term" target="_blank">
             {{ term }}
@@ -10,14 +10,14 @@
         <template v-else>
           {{ term }}
         </template>
-      </ion-card-subtitle>
-      <ion-card-title :skillName='setSkillName'>{{skillName}}</ion-card-title>
-    </ion-card-header>
+      </IonCardSubtitle>
+      <IonCardTitle :skillName='setSkillName'>{{skillName}}</IonCardTitle>
+    </IonCardHeader>
 
-    <ion-card-content>
+    <IonCardContent>
       {{skillDesc}}
-    </ion-card-content>
-  </ion-card>
+    </IonCardContent>
+  </IonCard>
 </template>
 
 <script>

@@ -1,11 +1,11 @@
 <template>
   <div>
-    <ion-avatar>
+    <IonAvatar>
       <img src="../static/img/icon.jpeg" alt="site author">
-    </ion-avatar>
-    <ion-text color="secondary">
+    </IonAvatar>
+    <IonText color="secondary">
       <h1>2021 Akane Yamashita</h1>
-    </ion-text>
+    </IonText>
 
     <h2>I'm a web developer.</h2>
     Thanks to:
@@ -30,11 +30,11 @@
 <script>
 import {
   IonAvatar, IonChip,
-  IonCol, IonGrid, IonRow
+  IonCol, IonGrid, IonRow, IonText
 } from '@ionic/vue'
 import MenuButton from './components/molecules/MenuButton.vue'
 import Container from './components/molecules/Container.vue'
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import apiService from './services/apiService.ts'
 export default defineComponent({
   components: {
@@ -44,14 +44,29 @@ export default defineComponent({
     IonGrid,
     IonRow,
     MenuButton,
-    Container
+    Container,
+    IonText
   },
   created: async function () {
-    if(!this.$store.state.embedObj.requested) {
+    if (!this.$store.state.embedObj.requested) {
       apiService.get('http://localhost:1235/getEmbedObj', {}).then(res => {
         this.$store.commit('embedObj/REQUESTED', res.data)
       })
     }
+  },
+  setup () {
+    const repositories = ref([])
+    const getUserRepositories = async () => {
+      repositories.value = await apiService.get('http://localhost:1235/getEmbedObj', {}).then(res => {
+        this.$store.commit('embedObj/REQUESTED', res.data)
+      })
+    }
+    return {
+      getUserRepositories
+    }
+  },
+  mouted () {
+    this.getUserRepositories()
   }
 })
 </script>

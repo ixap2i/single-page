@@ -1,24 +1,29 @@
 <template>
-  <ion-grid>
-    <ion-row>
-    </ion-row>
-    <ion-row>
-      <ion-col :style="{'display': containerWidth !== '0' ? 'block' : 'none'}">
-      </ion-col>
-      <ion-col>
+  <IonGrid>
+    <IonRow>
+    </IonRow>
+    <IonRow>
+      <IonCol :style="{'display': containerWidth !== '0' ? 'block' : 'none'}">
+      </IonCol>
+      <IonCol>
         <router-view/>
-      </ion-col>
-      <ion-col :style="{'display': containerWidth !== '0' ? 'block' : 'none'}">
-      </ion-col>
-    </ion-row>
-    <ion-row :style="{'height': containerHeight+'px'}">
-    </ion-row>
-  </ion-grid>
+      </IonCol>
+      <IonCol :style="{'display': containerWidth !== '0' ? 'block' : 'none'}">
+      </IonCol>
+    </IonRow>
+    <IonRow :style="{'height': containerHeight+'px'}">
+    </IonRow>
+  </IonGrid>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-export default defineComponent({
+import { IonGrid, IonCol, IonRow } from '@ionic/vue'
+
+export default {
+  name: 'Container',
+  components: {
+    IonGrid, IonCol, IonRow
+  },
   data: () => {
     return {
       containerHeight: 0,
@@ -36,6 +41,6 @@ export default defineComponent({
       this.containerWidth = '0'
     }
   }
-})
+}
 
 </script>
