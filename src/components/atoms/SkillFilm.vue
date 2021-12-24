@@ -53,9 +53,6 @@ export default defineComponent({
     return {
       repository
     }
-  },
-  beforeMount: function () {
-    console.log(this.repository[0])
   }
 })
 </script>
