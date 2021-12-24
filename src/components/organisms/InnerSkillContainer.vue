@@ -1,24 +1,22 @@
 <template>
-  <div>
-    <IonGrid>
-      <IonRow>
-        <IonCol>
-        </IonCol>
-        <IonCol>
-          <Title :title="'skill'" :icon="'fa fa-address-card'" />
-          <template v-for="item in items" :key="item">
-            <SkillFilm
-              :skillName='item.skillName'
-              :skillDesc='item.desc'
-              :term='item.term'
-              :imageName='item.imageName' />
-          </template>
-        </IonCol>
-        <IonCol>
-        </IonCol>
-      </IonRow>
-    </IonGrid>
-  </div>
+  <IonGrid>
+    <IonRow>
+      <IonCol>
+      </IonCol>
+      <IonCol>
+        <Title :title="'skill'" :icon="'fa fa-address-card'" />
+        <template v-for="item in items" :key="item">
+          <SkillFilm
+            :skillName='item.skillName'
+            :skillDesc='item.desc'
+            :term='item.term'
+            :imageName='item.imageName' />
+        </template>
+      </IonCol>
+      <IonCol>
+      </IonCol>
+    </IonRow>
+  </IonGrid>
 </template>
 
 <script>

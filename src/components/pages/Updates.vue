@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <InnerUpdatesContainer />
-  </div>
+  <InnerUpdatesContainer />
 </template>
 
 <script>

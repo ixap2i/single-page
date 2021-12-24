@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <IonText style='margin-inline-start: 10px; font-size: 24px;' color="danger">
-      <i :class="icon" aria-hidden="true"></i>
-      {{title}}
-    </IonText>
-  </div>
+  <IonText style='margin-inline-start: 10px; font-size: 24px;' color="danger">
+    <i :class="icon" aria-hidden="true"></i>
+    {{title}}
+  </IonText>
 </template>
 
 <style>

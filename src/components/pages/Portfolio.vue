@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <Title :title="'Portfolio'" :icon="'fa fa-motorcycle'" />
-    <Card
-      v-for="item in items"
-      :key="item.title"
-      :projectName="item.title"
-      :projectDescription="item.subtitle"
-      :term="item.link"
-      :link="true">
-    </Card>
-  </div>
+  <Title :title="'Portfolio'" :icon="'fa fa-motorcycle'" />
+  <Card
+    v-for="item in items"
+    :key="item.title"
+    :projectName="item.title"
+    :projectDescription="item.subtitle"
+    :term="item.link"
+    :link="true">
+  </Card>
 </template>
 
 <style>

@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <InnerSkillContainer />
-  </div>
+  <InnerSkillContainer />
 </template>
 
 <script>
