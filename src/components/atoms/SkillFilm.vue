@@ -1,5 +1,5 @@
 <template>
-  <IonCard :style="{ 'background-image': 'url(./img/'+imageName+')', 'width': filmWidth, 'height': filmHeight }">
+  <IonCard :style="{ 'background-image': 'url(./img/'+imageName+')', 'width': this.repository[0], 'height': this.repository[1] }">
     <IonCardHeader>
       <IonCardSubtitle>
         <template v-if="link">
@@ -11,7 +11,7 @@
           {{ term }}
         </template>
       </IonCardSubtitle>
-      <IonCardTitle :skillName='setSkillName'>{{skillName}}</IonCardTitle>
+      <IonCardTitle :skillName='skillName'>{{skillName}}</IonCardTitle>
     </IonCardHeader>
 
     <IonCardContent>
@@ -21,14 +21,12 @@
 </template>
 
 <script>
-import { IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel } from '@ionic/vue'
-import { warning } from 'ionicons/icons'
-import { defineComponent } from 'vue'
+import { IonCard, IonCardHeader, IonCardContent, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel } from '@ionic/vue'
+import { defineComponent, ref, onBeforeMount } from 'vue'
+
 export default defineComponent({
-  components: { IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel },
-  setup () {
-    return { warning }
-  },
+  name: 'SkillFilm',
+  components: { IonCard, IonCardHeader, IonCardContent, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel },
   props: {
     skillName: String,
     skillDesc: String,
@@ -36,28 +34,28 @@ export default defineComponent({
     img: String,
     link: Boolean,
     imageName: String,
-    filmWidth: String,
-    filmHeight: String
+    innerHeight: String,
+    innerWidth: String
   },
-  data: () => {
-    return {
-      filmWidth: 0,
-      filmHeight: 0
-    }
-  },
-  created: function () {
-    console.log(__dirname)
+  setup (props) {
+    let width = ''
+    let height = ''
     if (window.innerWidth < 500) {
-      this.filmWidth = '320px'
+      width = '320px'
     } else {
-      this.filmWidth = '400px'
+      width = '400px'
     }
-    if (window.innerHeight < 800) {
-      this.filmHeight = '267px'
-    } else {
-      this.filmHeight = '267px'
+    height = '264px'
+
+    const repository = ref([width, height])
+
+    onBeforeMount(repository)
+    return {
+      repository
     }
-    console.log()
+  },
+  beforeMount: function () {
+    console.log(this.repository[0])
   }
 })
 </script>
