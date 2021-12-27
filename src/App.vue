@@ -20,13 +20,26 @@
     <a href='https://www.pexels.com/ja-jp/@kpaukshtite?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels'>
     Kristina Paukshtite
     </a>/
-    <container style="height: 648px; overflow: scroll;">
+    <container>
     </container>
     <menu-button></menu-button>
-    <div style='padding-bottom: 200px;'></div>
+    <div class="dip"></div>
   </div>
 </template>
-
+<style scoped>
+::v-global(body) {
+  margin: initial;
+}
+::v-global(#app) {
+  margin: 16px;
+}
+::v-global(container) {
+  height: 648px; overflow: scroll;
+}
+::v-global(.dip) {
+  padding-bottom: 200px;
+}
+</style>
 <script>
 import {
   IonAvatar, IonChip,
